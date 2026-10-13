@@ -1,2 +1,3 @@
-# vast-pea
-A collection of scripts, tools and utilities for the atomistic simulation of vitrimers
+# Vitrimer Atomistic Simulation Tools for Prediction and Exploration Analysis (VAST-PEA)
+
+hi
