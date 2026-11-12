@@ -8,500 +8,500 @@ HEADER,  poly2_post.mol2  read w/ mol2SYBYL2lmp > atom_typing v1.10 / 10 May 202
 
 Types
 
- 1  c2    #  c2   
- 2  oh    #  oh   
- 3  nn    #  nn   
- 4  c1    #  c1   
- 5  hc    #  hc   
- 6  hc    #  hc   
- 7  hc    #  hc   
- 8  hc    #  hc   
- 9  hc    #  hc   
-10  hc    #  hc   
-11  hc    #  hc   
-12  ho2   #  ho2  
-13  cp    #  cp   
-14  cp    #  cp   
-15  cp    #  cp   
-16  cp    #  cp   
-17  cp    #  cp   
-18  cp    #  cp   
-19  oc    #  oc   
-20  c2    #  c2   
-21  hc    #  hc   
-22  hc    #  hc   
-23  hc    #  hc   
-24  cp    #  cp   
-25  cp    #  cp   
-26  cp    #  cp   
-27  cp    #  cp   
-28  cp    #  cp   
-29  cp    #  cp   
-30  hc    #  hc   
-31  hc    #  hc   
-32  hc    #  hc   
-33  c2    #  c2   
-34  c2    #  c2   
-35  oh    #  oh   
-36  oc    #  oc   
-37  c1    #  c1   
-38  hc    #  hc   
-39  hc    #  hc   
-40  hc    #  hc   
-41  hc    #  hc   
-42  hc    #  hc   
-43  hc    #  hc   
-44  hc    #  hc   
-45  ho2   #  ho2  
-46  cp    #  cp   
-47  cp    #  cp   
-48  cp    #  cp   
-49  cp    #  cp   
-50  cp    #  cp   
-51  cp    #  cp   
-52  hc    #  hc   
-53  hc    #  hc   
-54  h     #  h    
-55  h     #  h    
+ 1  c2    #  c2
+ 2  oh    #  oh
+ 3  nn    #  nn
+ 4  c1    #  c1
+ 5  hc    #  hc
+ 6  hc    #  hc
+ 7  hc    #  hc
+ 8  hc    #  hc
+ 9  hc    #  hc
+10  hc    #  hc
+11  hc    #  hc
+12  ho2   #  ho2
+13  cp    #  cp
+14  cp    #  cp
+15  cp    #  cp
+16  cp    #  cp
+17  cp    #  cp
+18  cp    #  cp
+19  oc    #  oc
+20  c2    #  c2
+21  hc    #  hc
+22  hc    #  hc
+23  hc    #  hc
+24  cp    #  cp
+25  cp    #  cp
+26  cp    #  cp
+27  cp    #  cp
+28  cp    #  cp
+29  cp    #  cp
+30  hc    #  hc
+31  hc    #  hc
+32  hc    #  hc
+33  c2    #  c2
+34  c2    #  c2
+35  oh    #  oh
+36  oc    #  oc
+37  c1    #  c1
+38  hc    #  hc
+39  hc    #  hc
+40  hc    #  hc
+41  hc    #  hc
+42  hc    #  hc
+43  hc    #  hc
+44  hc    #  hc
+45  ho2   #  ho2
+46  cp    #  cp
+47  cp    #  cp
+48  cp    #  cp
+49  cp    #  cp
+50  cp    #  cp
+51  cp    #  cp
+52  hc    #  hc
+53  hc    #  hc
+54  h     #  h
+55  h     #  h
 
 Charges
 
- 1    0.041500 #  c2   
- 2   -0.386900 #  oh   
- 3   -0.324700 #  nn   
- 4    0.104700 #  c1   
- 5    0.062500 #  hc   
- 6    0.065400 #  hc   
- 7    0.065400 #  hc   
- 8    0.062500 #  hc   
- 9    0.072300 #  hc   
-10    0.072300 #  hc   
-11    0.064300 #  hc   
-12    0.210000 #  ho2  
-13   -0.017700 #  cp   
-14   -0.050600 #  cp   
-15   -0.019400 #  cp   
-16    0.120700 #  cp   
-17   -0.019400 #  cp   
-18   -0.050600 #  cp   
-19   -0.489400 #  oc   
-20    0.116900 #  c2   
-21    0.049000 #  hc   
-22    0.063600 #  hc   
-23    0.062400 #  hc   
-24   -0.017800 #  cp   
-25   -0.052300 #  cp   
-26   -0.040100 #  cp   
-27    0.029900 #  cp   
-28   -0.040100 #  cp   
-29   -0.052300 #  cp   
-30    0.062400 #  hc   
-31    0.063600 #  hc   
-32    0.049000 #  hc   
-33    0.116900 #  c2   
-34    0.041500 #  c2   
-35   -0.386900 #  oh   
-36   -0.489400 #  oc   
-37    0.104700 #  c1   
-38    0.062500 #  hc   
-39    0.065400 #  hc   
-40    0.065400 #  hc   
-41    0.062500 #  hc   
-42    0.072300 #  hc   
-43    0.072300 #  hc   
-44    0.064300 #  hc   
-45    0.210000 #  ho2  
-46   -0.017700 #  cp   
-47   -0.050600 #  cp   
-48   -0.019400 #  cp   
-49    0.120700 #  cp   
-50   -0.019400 #  cp   
-51   -0.050600 #  cp   
-52    0.049000 #  hc   
-53    0.049000 #  hc   
-54    0.000000 #  h    
-55    0.000000 #  h    
+ 1    0.041500 #  c2
+ 2   -0.386900 #  oh
+ 3   -0.324700 #  nn
+ 4    0.104700 #  c1
+ 5    0.062500 #  hc
+ 6    0.065400 #  hc
+ 7    0.065400 #  hc
+ 8    0.062500 #  hc
+ 9    0.072300 #  hc
+10    0.072300 #  hc
+11    0.064300 #  hc
+12    0.210000 #  ho2
+13   -0.017700 #  cp
+14   -0.050600 #  cp
+15   -0.019400 #  cp
+16    0.120700 #  cp
+17   -0.019400 #  cp
+18   -0.050600 #  cp
+19   -0.489400 #  oc
+20    0.116900 #  c2
+21    0.049000 #  hc
+22    0.063600 #  hc
+23    0.062400 #  hc
+24   -0.017800 #  cp
+25   -0.052300 #  cp
+26   -0.040100 #  cp
+27    0.029900 #  cp
+28   -0.040100 #  cp
+29   -0.052300 #  cp
+30    0.062400 #  hc
+31    0.063600 #  hc
+32    0.049000 #  hc
+33    0.116900 #  c2
+34    0.041500 #  c2
+35   -0.386900 #  oh
+36   -0.489400 #  oc
+37    0.104700 #  c1
+38    0.062500 #  hc
+39    0.065400 #  hc
+40    0.065400 #  hc
+41    0.062500 #  hc
+42    0.072300 #  hc
+43    0.072300 #  hc
+44    0.064300 #  hc
+45    0.210000 #  ho2
+46   -0.017700 #  cp
+47   -0.050600 #  cp
+48   -0.019400 #  cp
+49    0.120700 #  cp
+50   -0.019400 #  cp
+51   -0.050600 #  cp
+52    0.049000 #  hc
+53    0.049000 #  hc
+54    0.000000 #  h
+55    0.000000 #  h
 
 Coords
 
- 1     -1.146513       -1.694642       1.444222     #  c2   
- 2     -2.279913       -2.883942       -0.381978    #  oh   
- 3     -0.105213       -1.120742       0.565822     #  nn   
- 4     -2.485413       -2.097742       0.761722     #  c1   
- 5     -4.191713       3.215358        4.452922     #  hc   
- 6     -4.126013       0.796458        3.942922     #  hc   
- 7     -3.522513       1.753158        -0.232378    #  hc   
- 8     -3.582713       4.126758        0.310922     #  hc   
- 9     -4.399613       -1.413242       0.054022     #  hc   
-10     -3.072613       -0.310342       -0.329078    #  hc   
-11     -3.021513       -2.728142       1.505722     #  hc   
-12     -1.876413       -2.297642       -1.074178    #  ho2  
-13     -3.884913       3.820158        2.414822     #  cp   
-14     -4.039713       2.881758        3.435422     #  cp   
-15     -4.001513       1.515358        3.142622     #  cp   
-16     -3.806213       1.070558        1.827722     #  cp   
-17     -3.656413       2.029758        0.800522     #  cp   
-18     -3.694713       3.394958        1.100022     #  cp   
-19     -3.792213       -0.273142       1.612622     #  oc   
-20     -3.468213       -0.957242       0.453622     #  c2   
-21     -0.731913       -2.594742       1.945722     #  hc   
-22     -0.206113       -3.869942       0.213822     #  hc   
-23     1.542887        -5.322142       -0.594778    #  hc   
-24     2.976487        -3.751742       -0.863178    #  cp   
-25     3.224387        -2.388342       -0.742278    #  cp   
-26     2.226587        -1.526342       -0.275578    #  cp   
-27     0.941187        -2.004942       0.072022     #  cp   
-28     0.728987        -3.405242       -0.046378    #  cp   
-29     1.731787        -4.259442       -0.510678    #  cp   
-30     4.199187        -1.999442       -1.004778    #  hc   
-31     2.489887        -0.493042       -0.177078    #  hc   
-32     -1.356613       -1.032142       2.312022     #  hc   
-33     1.023687        1.040958        -1.783878    #  c2   
-34     0.070987        0.346158        0.598622     #  c2   
-35     -1.288013       0.657558        -1.383578    #  oh   
-36     2.163887        1.629758        -1.268278    #  oc   
-37     -0.115813       1.091758        -0.758878    #  c1   
-38     6.391587        3.239258        -1.429178    #  hc   
-39     4.286687        2.723858        -0.231878    #  hc   
-40     2.646587        1.114458        -3.890178    #  hc   
-41     4.746687        1.642558        -5.050778    #  hc   
-42     0.692787        1.635458        -2.664378    #  hc   
-43     1.219187        0.005558        -2.128478    #  hc   
-44     -0.215013       2.171158        -0.483878    #  hc   
-45     -1.673013       1.437758        -1.862778    #  ho2  
-46     5.699387        2.470958        -3.312278    #  cp   
-47     5.569187        2.773758        -1.955878    #  cp   
-48     4.378387        2.480358        -1.282778    #  cp   
-49     3.306987        1.880458        -1.960378    #  cp   
-50     3.449387        1.574958        -3.330978    #  cp   
-51     4.641687        1.872558        -3.998878    #  cp   
-52     -0.717313       0.778258        1.253822     #  hc   
-53     1.028887        0.626658        1.085322     #  hc   
-54     -2.724213       -4.269942       5.278122     #  h    
-55     1.804687        -5.104242       4.424522     #  h    
+ 1     -1.146513       -1.694642       1.444222     #  c2
+ 2     -2.279913       -2.883942       -0.381978    #  oh
+ 3     -0.105213       -1.120742       0.565822     #  nn
+ 4     -2.485413       -2.097742       0.761722     #  c1
+ 5     -4.191713       3.215358        4.452922     #  hc
+ 6     -4.126013       0.796458        3.942922     #  hc
+ 7     -3.522513       1.753158        -0.232378    #  hc
+ 8     -3.582713       4.126758        0.310922     #  hc
+ 9     -4.399613       -1.413242       0.054022     #  hc
+10     -3.072613       -0.310342       -0.329078    #  hc
+11     -3.021513       -2.728142       1.505722     #  hc
+12     -1.876413       -2.297642       -1.074178    #  ho2
+13     -3.884913       3.820158        2.414822     #  cp
+14     -4.039713       2.881758        3.435422     #  cp
+15     -4.001513       1.515358        3.142622     #  cp
+16     -3.806213       1.070558        1.827722     #  cp
+17     -3.656413       2.029758        0.800522     #  cp
+18     -3.694713       3.394958        1.100022     #  cp
+19     -3.792213       -0.273142       1.612622     #  oc
+20     -3.468213       -0.957242       0.453622     #  c2
+21     -0.731913       -2.594742       1.945722     #  hc
+22     -0.206113       -3.869942       0.213822     #  hc
+23     1.542887        -5.322142       -0.594778    #  hc
+24     2.976487        -3.751742       -0.863178    #  cp
+25     3.224387        -2.388342       -0.742278    #  cp
+26     2.226587        -1.526342       -0.275578    #  cp
+27     0.941187        -2.004942       0.072022     #  cp
+28     0.728987        -3.405242       -0.046378    #  cp
+29     1.731787        -4.259442       -0.510678    #  cp
+30     4.199187        -1.999442       -1.004778    #  hc
+31     2.489887        -0.493042       -0.177078    #  hc
+32     -1.356613       -1.032142       2.312022     #  hc
+33     1.023687        1.040958        -1.783878    #  c2
+34     0.070987        0.346158        0.598622     #  c2
+35     -1.288013       0.657558        -1.383578    #  oh
+36     2.163887        1.629758        -1.268278    #  oc
+37     -0.115813       1.091758        -0.758878    #  c1
+38     6.391587        3.239258        -1.429178    #  hc
+39     4.286687        2.723858        -0.231878    #  hc
+40     2.646587        1.114458        -3.890178    #  hc
+41     4.746687        1.642558        -5.050778    #  hc
+42     0.692787        1.635458        -2.664378    #  hc
+43     1.219187        0.005558        -2.128478    #  hc
+44     -0.215013       2.171158        -0.483878    #  hc
+45     -1.673013       1.437758        -1.862778    #  ho2
+46     5.699387        2.470958        -3.312278    #  cp
+47     5.569187        2.773758        -1.955878    #  cp
+48     4.378387        2.480358        -1.282778    #  cp
+49     3.306987        1.880458        -1.960378    #  cp
+50     3.449387        1.574958        -3.330978    #  cp
+51     4.641687        1.872558        -3.998878    #  cp
+52     -0.717313       0.778258        1.253822     #  hc
+53     1.028887        0.626658        1.085322     #  hc
+54     -2.724213       -4.269942       5.278122     #  h
+55     1.804687        -5.104242       4.424522     #  h
 
 Bonds
 
-1  c2-nn      1  3  #  c2                nn   
-2  c1-c2      4  1  #  c1                c2   
-3  c2-hc      1  21 #  c2                hc   
-4  c2-hc      1  32 #  c2                hc   
-5  c1-oh      4  2  #  c1                oh   
-6  ho2-oh     12 2  #  ho2               oh   
-7  cp-nn      27 3  #  cp                nn   
-8  c2-nn      34 3  #  c2                nn   
-9  c1-hc      4  11 #  c1                hc   
-10 c1-c2      4  20 #  c1                c2   
-11 cp-hc      14 5  #  cp                hc   
-12 cp-hc      15 6  #  cp                hc   
-13 cp-hc      17 7  #  cp                hc   
-14 cp-hc      18 8  #  cp                hc   
-15 c2-hc      20 9  #  c2                hc   
-16 c2-hc      20 10 #  c2                hc   
-17 cp-cp      13 14 #  cp                cp   
-18 cp-cp      13 18 #  cp                cp   
-19 cp-cp      14 15 #  cp                cp   
-20 cp-cp      15 16 #  cp                cp   
-21 cp-cp      16 17 #  cp                cp   
-22 cp-oc      16 19 #  cp                oc   
-23 cp-cp      17 18 #  cp                cp   
-24 c2-oc      20 19 #  c2                oc   
-25 cp-hc      28 22 #  cp                hc   
-26 cp-hc      29 23 #  cp                hc   
-27 cp-cp      24 25 #  cp                cp   
-28 cp-cp      24 29 #  cp                cp   
-29 cp-cp      25 26 #  cp                cp   
-30 cp-hc      25 30 #  cp                hc   
-31 cp-cp      26 27 #  cp                cp   
-32 cp-hc      26 31 #  cp                hc   
-33 cp-cp      27 28 #  cp                cp   
-34 cp-cp      28 29 #  cp                cp   
-35 c2-oc      33 36 #  c2                oc   
-36 c1-c2      37 33 #  c1                c2   
-37 c2-hc      33 42 #  c2                hc   
-38 c2-hc      33 43 #  c2                hc   
-39 c1-c2      37 34 #  c1                c2   
-40 c2-hc      34 52 #  c2                hc   
-41 c2-hc      34 53 #  c2                hc   
-42 c1-oh      37 35 #  c1                oh   
-43 ho2-oh     45 35 #  ho2               oh   
-44 cp-oc      49 36 #  cp                oc   
-45 c1-hc      37 44 #  c1                hc   
-46 cp-hc      47 38 #  cp                hc   
-47 cp-hc      48 39 #  cp                hc   
-48 cp-hc      50 40 #  cp                hc   
-49 cp-hc      51 41 #  cp                hc   
-50 cp-cp      46 47 #  cp                cp   
-51 cp-cp      46 51 #  cp                cp   
-52 cp-cp      47 48 #  cp                cp   
-53 cp-cp      48 49 #  cp                cp   
-54 cp-cp      49 50 #  cp                cp   
-55 cp-cp      50 51 #  cp                cp   
+1  c2-nn      1  3  #  c2                nn
+2  c1-c2      4  1  #  c1                c2
+3  c2-hc      1  21 #  c2                hc
+4  c2-hc      1  32 #  c2                hc
+5  c1-oh      4  2  #  c1                oh
+6  ho2-oh     12 2  #  ho2               oh
+7  cp-nn      27 3  #  cp                nn
+8  c2-nn      34 3  #  c2                nn
+9  c1-hc      4  11 #  c1                hc
+10 c1-c2      4  20 #  c1                c2
+11 cp-hc      14 5  #  cp                hc
+12 cp-hc      15 6  #  cp                hc
+13 cp-hc      17 7  #  cp                hc
+14 cp-hc      18 8  #  cp                hc
+15 c2-hc      20 9  #  c2                hc
+16 c2-hc      20 10 #  c2                hc
+17 cp-cp      13 14 #  cp                cp
+18 cp-cp      13 18 #  cp                cp
+19 cp-cp      14 15 #  cp                cp
+20 cp-cp      15 16 #  cp                cp
+21 cp-cp      16 17 #  cp                cp
+22 cp-oc      16 19 #  cp                oc
+23 cp-cp      17 18 #  cp                cp
+24 c2-oc      20 19 #  c2                oc
+25 cp-hc      28 22 #  cp                hc
+26 cp-hc      29 23 #  cp                hc
+27 cp-cp      24 25 #  cp                cp
+28 cp-cp      24 29 #  cp                cp
+29 cp-cp      25 26 #  cp                cp
+30 cp-hc      25 30 #  cp                hc
+31 cp-cp      26 27 #  cp                cp
+32 cp-hc      26 31 #  cp                hc
+33 cp-cp      27 28 #  cp                cp
+34 cp-cp      28 29 #  cp                cp
+35 c2-oc      33 36 #  c2                oc
+36 c1-c2      37 33 #  c1                c2
+37 c2-hc      33 42 #  c2                hc
+38 c2-hc      33 43 #  c2                hc
+39 c1-c2      37 34 #  c1                c2
+40 c2-hc      34 52 #  c2                hc
+41 c2-hc      34 53 #  c2                hc
+42 c1-oh      37 35 #  c1                oh
+43 ho2-oh     45 35 #  ho2               oh
+44 cp-oc      49 36 #  cp                oc
+45 c1-hc      37 44 #  c1                hc
+46 cp-hc      47 38 #  cp                hc
+47 cp-hc      48 39 #  cp                hc
+48 cp-hc      50 40 #  cp                hc
+49 cp-hc      51 41 #  cp                hc
+50 cp-cp      46 47 #  cp                cp
+51 cp-cp      46 51 #  cp                cp
+52 cp-cp      47 48 #  cp                cp
+53 cp-cp      48 49 #  cp                cp
+54 cp-cp      49 50 #  cp                cp
+55 cp-cp      50 51 #  cp                cp
 
 Angles
 
-1  hc-c2-nn        32 1  3  #  hc             c2             nn   
-2  c1-c2-nn        4  1  3  #  c1             c2             nn   
-3  hc-c2-hc        21 1  32 #  hc             c2             hc   
-4  c1-c2-hc        4  1  21 #  c1             c2             hc   
-5  c1-c2-hc        4  1  32 #  c1             c2             hc   
-6  hc-c2-nn        21 1  3  #  hc             c2             nn   
-7  c1-oh-ho2       4  2  12 #  c1             oh            ho2   
-8  c2-nn-c2        1  3  34 #  c2             nn             c2   
-9  c2-nn-cp        1  3  27 #  c2             nn             cp   
-10 c2-nn-cp        34 3  27 #  c2             nn             cp   
-11 c2-c1-hc        20 4  11 #  c2             c1             hc   
-12 c2-c1-oh        1  4  2  #  c2             c1             oh   
-13 c2-c1-hc        1  4  11 #  c2             c1             hc   
-14 c2-c1-c2        1  4  20 #  c2             c1             c2   
-15 hc-c1-oh        11 4  2  #  hc             c1             oh   
-16 c2-c1-oh        20 4  2  #  c2             c1             oh   
-17 cp-cp-cp        14 13 18 #  cp             cp             cp   
-18 cp-cp-hc        15 14 5  #  cp             cp             hc   
-19 cp-cp-cp        13 14 15 #  cp             cp             cp   
-20 cp-cp-hc        13 14 5  #  cp             cp             hc   
-21 cp-cp-hc        14 15 6  #  cp             cp             hc   
-22 cp-cp-hc        16 15 6  #  cp             cp             hc   
-23 cp-cp-cp        14 15 16 #  cp             cp             cp   
-24 cp-cp-oc        15 16 19 #  cp             cp             oc   
-25 cp-cp-cp        15 16 17 #  cp             cp             cp   
-26 cp-cp-oc        17 16 19 #  cp             cp             oc   
-27 cp-cp-hc        18 17 7  #  cp             cp             hc   
-28 cp-cp-cp        16 17 18 #  cp             cp             cp   
-29 cp-cp-hc        16 17 7  #  cp             cp             hc   
-30 cp-cp-hc        17 18 8  #  cp             cp             hc   
-31 cp-cp-cp        13 18 17 #  cp             cp             cp   
-32 cp-cp-hc        13 18 8  #  cp             cp             hc   
-33 c2-oc-cp        20 19 16 #  c2             oc             cp   
-34 hc-c2-oc        10 20 19 #  hc             c2             oc   
-35 c1-c2-hc        4  20 10 #  c1             c2             hc   
-36 c1-c2-oc        4  20 19 #  c1             c2             oc   
-37 c1-c2-hc        4  20 9  #  c1             c2             hc   
-38 hc-c2-hc        9  20 10 #  hc             c2             hc   
-39 hc-c2-oc        9  20 19 #  hc             c2             oc   
-40 cp-cp-cp        25 24 29 #  cp             cp             cp   
-41 cp-cp-hc        24 25 30 #  cp             cp             hc   
-42 cp-cp-hc        26 25 30 #  cp             cp             hc   
-43 cp-cp-cp        24 25 26 #  cp             cp             cp   
-44 cp-cp-cp        25 26 27 #  cp             cp             cp   
-45 cp-cp-hc        27 26 31 #  cp             cp             hc   
-46 cp-cp-hc        25 26 31 #  cp             cp             hc   
-47 cp-cp-nn        26 27 3  #  cp             cp             nn   
-48 cp-cp-nn        28 27 3  #  cp             cp             nn   
-49 cp-cp-cp        26 27 28 #  cp             cp             cp   
-50 cp-cp-hc        27 28 22 #  cp             cp             hc   
-51 cp-cp-hc        29 28 22 #  cp             cp             hc   
-52 cp-cp-cp        27 28 29 #  cp             cp             cp   
-53 cp-cp-cp        24 29 28 #  cp             cp             cp   
-54 cp-cp-hc        24 29 23 #  cp             cp             hc   
-55 cp-cp-hc        28 29 23 #  cp             cp             hc   
-56 c1-c2-hc        37 33 42 #  c1             c2             hc   
-57 c1-c2-oc        37 33 36 #  c1             c2             oc   
-58 c1-c2-hc        37 33 43 #  c1             c2             hc   
-59 hc-c2-oc        43 33 36 #  hc             c2             oc   
-60 hc-c2-hc        42 33 43 #  hc             c2             hc   
-61 hc-c2-oc        42 33 36 #  hc             c2             oc   
-62 c1-c2-hc        37 34 52 #  c1             c2             hc   
-63 hc-c2-nn        53 34 3  #  hc             c2             nn   
-64 hc-c2-hc        52 34 53 #  hc             c2             hc   
-65 c1-c2-nn        37 34 3  #  c1             c2             nn   
-66 c1-c2-hc        37 34 53 #  c1             c2             hc   
-67 hc-c2-nn        52 34 3  #  hc             c2             nn   
-68 c1-oh-ho2       37 35 45 #  c1             oh            ho2   
-69 c2-oc-cp        33 36 49 #  c2             oc             cp   
-70 c2-c1-oh        34 37 35 #  c2             c1             oh   
-71 c2-c1-oh        33 37 35 #  c2             c1             oh   
-72 c2-c1-hc        33 37 44 #  c2             c1             hc   
-73 c2-c1-hc        34 37 44 #  c2             c1             hc   
-74 c2-c1-c2        33 37 34 #  c2             c1             c2   
-75 hc-c1-oh        44 37 35 #  hc             c1             oh   
-76 cp-cp-cp        47 46 51 #  cp             cp             cp   
-77 cp-cp-hc        48 47 38 #  cp             cp             hc   
-78 cp-cp-hc        46 47 38 #  cp             cp             hc   
-79 cp-cp-cp        46 47 48 #  cp             cp             cp   
-80 cp-cp-hc        47 48 39 #  cp             cp             hc   
-81 cp-cp-cp        47 48 49 #  cp             cp             cp   
-82 cp-cp-hc        49 48 39 #  cp             cp             hc   
-83 cp-cp-oc        50 49 36 #  cp             cp             oc   
-84 cp-cp-cp        48 49 50 #  cp             cp             cp   
-85 cp-cp-oc        48 49 36 #  cp             cp             oc   
-86 cp-cp-cp        49 50 51 #  cp             cp             cp   
-87 cp-cp-hc        49 50 40 #  cp             cp             hc   
-88 cp-cp-hc        51 50 40 #  cp             cp             hc   
-89 cp-cp-cp        46 51 50 #  cp             cp             cp   
-90 cp-cp-hc        46 51 41 #  cp             cp             hc   
-91 cp-cp-hc        50 51 41 #  cp             cp             hc   
+1  hc-c2-nn        32 1  3  #  hc             c2             nn
+2  c1-c2-nn        4  1  3  #  c1             c2             nn
+3  hc-c2-hc        21 1  32 #  hc             c2             hc
+4  c1-c2-hc        4  1  21 #  c1             c2             hc
+5  c1-c2-hc        4  1  32 #  c1             c2             hc
+6  hc-c2-nn        21 1  3  #  hc             c2             nn
+7  c1-oh-ho2       4  2  12 #  c1             oh            ho2
+8  c2-nn-c2        1  3  34 #  c2             nn             c2
+9  c2-nn-cp        1  3  27 #  c2             nn             cp
+10 c2-nn-cp        34 3  27 #  c2             nn             cp
+11 c2-c1-hc        20 4  11 #  c2             c1             hc
+12 c2-c1-oh        1  4  2  #  c2             c1             oh
+13 c2-c1-hc        1  4  11 #  c2             c1             hc
+14 c2-c1-c2        1  4  20 #  c2             c1             c2
+15 hc-c1-oh        11 4  2  #  hc             c1             oh
+16 c2-c1-oh        20 4  2  #  c2             c1             oh
+17 cp-cp-cp        14 13 18 #  cp             cp             cp
+18 cp-cp-hc        15 14 5  #  cp             cp             hc
+19 cp-cp-cp        13 14 15 #  cp             cp             cp
+20 cp-cp-hc        13 14 5  #  cp             cp             hc
+21 cp-cp-hc        14 15 6  #  cp             cp             hc
+22 cp-cp-hc        16 15 6  #  cp             cp             hc
+23 cp-cp-cp        14 15 16 #  cp             cp             cp
+24 cp-cp-oc        15 16 19 #  cp             cp             oc
+25 cp-cp-cp        15 16 17 #  cp             cp             cp
+26 cp-cp-oc        17 16 19 #  cp             cp             oc
+27 cp-cp-hc        18 17 7  #  cp             cp             hc
+28 cp-cp-cp        16 17 18 #  cp             cp             cp
+29 cp-cp-hc        16 17 7  #  cp             cp             hc
+30 cp-cp-hc        17 18 8  #  cp             cp             hc
+31 cp-cp-cp        13 18 17 #  cp             cp             cp
+32 cp-cp-hc        13 18 8  #  cp             cp             hc
+33 c2-oc-cp        20 19 16 #  c2             oc             cp
+34 hc-c2-oc        10 20 19 #  hc             c2             oc
+35 c1-c2-hc        4  20 10 #  c1             c2             hc
+36 c1-c2-oc        4  20 19 #  c1             c2             oc
+37 c1-c2-hc        4  20 9  #  c1             c2             hc
+38 hc-c2-hc        9  20 10 #  hc             c2             hc
+39 hc-c2-oc        9  20 19 #  hc             c2             oc
+40 cp-cp-cp        25 24 29 #  cp             cp             cp
+41 cp-cp-hc        24 25 30 #  cp             cp             hc
+42 cp-cp-hc        26 25 30 #  cp             cp             hc
+43 cp-cp-cp        24 25 26 #  cp             cp             cp
+44 cp-cp-cp        25 26 27 #  cp             cp             cp
+45 cp-cp-hc        27 26 31 #  cp             cp             hc
+46 cp-cp-hc        25 26 31 #  cp             cp             hc
+47 cp-cp-nn        26 27 3  #  cp             cp             nn
+48 cp-cp-nn        28 27 3  #  cp             cp             nn
+49 cp-cp-cp        26 27 28 #  cp             cp             cp
+50 cp-cp-hc        27 28 22 #  cp             cp             hc
+51 cp-cp-hc        29 28 22 #  cp             cp             hc
+52 cp-cp-cp        27 28 29 #  cp             cp             cp
+53 cp-cp-cp        24 29 28 #  cp             cp             cp
+54 cp-cp-hc        24 29 23 #  cp             cp             hc
+55 cp-cp-hc        28 29 23 #  cp             cp             hc
+56 c1-c2-hc        37 33 42 #  c1             c2             hc
+57 c1-c2-oc        37 33 36 #  c1             c2             oc
+58 c1-c2-hc        37 33 43 #  c1             c2             hc
+59 hc-c2-oc        43 33 36 #  hc             c2             oc
+60 hc-c2-hc        42 33 43 #  hc             c2             hc
+61 hc-c2-oc        42 33 36 #  hc             c2             oc
+62 c1-c2-hc        37 34 52 #  c1             c2             hc
+63 hc-c2-nn        53 34 3  #  hc             c2             nn
+64 hc-c2-hc        52 34 53 #  hc             c2             hc
+65 c1-c2-nn        37 34 3  #  c1             c2             nn
+66 c1-c2-hc        37 34 53 #  c1             c2             hc
+67 hc-c2-nn        52 34 3  #  hc             c2             nn
+68 c1-oh-ho2       37 35 45 #  c1             oh            ho2
+69 c2-oc-cp        33 36 49 #  c2             oc             cp
+70 c2-c1-oh        34 37 35 #  c2             c1             oh
+71 c2-c1-oh        33 37 35 #  c2             c1             oh
+72 c2-c1-hc        33 37 44 #  c2             c1             hc
+73 c2-c1-hc        34 37 44 #  c2             c1             hc
+74 c2-c1-c2        33 37 34 #  c2             c1             c2
+75 hc-c1-oh        44 37 35 #  hc             c1             oh
+76 cp-cp-cp        47 46 51 #  cp             cp             cp
+77 cp-cp-hc        48 47 38 #  cp             cp             hc
+78 cp-cp-hc        46 47 38 #  cp             cp             hc
+79 cp-cp-cp        46 47 48 #  cp             cp             cp
+80 cp-cp-hc        47 48 39 #  cp             cp             hc
+81 cp-cp-cp        47 48 49 #  cp             cp             cp
+82 cp-cp-hc        49 48 39 #  cp             cp             hc
+83 cp-cp-oc        50 49 36 #  cp             cp             oc
+84 cp-cp-cp        48 49 50 #  cp             cp             cp
+85 cp-cp-oc        48 49 36 #  cp             cp             oc
+86 cp-cp-cp        49 50 51 #  cp             cp             cp
+87 cp-cp-hc        49 50 40 #  cp             cp             hc
+88 cp-cp-hc        51 50 40 #  cp             cp             hc
+89 cp-cp-cp        46 51 50 #  cp             cp             cp
+90 cp-cp-hc        46 51 41 #  cp             cp             hc
+91 cp-cp-hc        50 51 41 #  cp             cp             hc
 
 Dihedrals
 
-1  hc-c2-nn-c2          21 1  3  34 #  hc             c2          nn             c2   
-2  hc-c2-nn-c2          32 1  3  34 #  hc             c2          nn             c2   
-3  hc-c2-nn-cp          21 1  3  27 #  hc             c2          nn             cp   
-4  c1-c2-nn-cp          4  1  3  27 #  c1             c2          nn             cp   
-5  hc-c1-c2-nn          11 4  1  3  #  hc             c1          c2             nn   
-6  c2-c1-c2-nn          20 4  1  3  #  c2             c1          c2             nn   
-7  c1-c2-nn-c2          4  1  3  34 #  c1             c2          nn             c2   
-8  c2-c1-oh-ho2         20 4  2  12 #  c2             c1          oh            ho2   
-9  hc-c2-nn-c2          53 34 3  1  #  hc             c2          nn             c2   
-10 c1-c2-nn-c2          37 34 3  1  #  c1             c2          nn             c2   
-11 hc-c2-nn-cp          52 34 3  27 #  hc             c2          nn             cp   
-12 hc-c2-nn-cp          32 1  3  27 #  hc             c2          nn             cp   
-13 hc-c2-nn-c2          52 34 3  1  #  hc             c2          nn             c2   
-14 hc-c2-nn-cp          53 34 3  27 #  hc             c2          nn             cp   
-15 cp-cp-nn-c2          26 27 3  1  #  cp             cp          nn             c2   
-16 c1-c2-nn-cp          37 34 3  27 #  c1             c2          nn             cp   
-17 cp-cp-nn-c2          28 27 3  1  #  cp             cp          nn             c2   
-18 hc-c1-oh-ho2         11 4  2  12 #  hc             c1          oh            ho2   
-19 c2-c1-oh-ho2         1  4  2  12 #  c2             c1          oh            ho2   
-20 c2-c1-c2-hc          20 4  1  32 #  c2             c1          c2             hc   
-21 c2-c1-c2-hc          1  4  20 10 #  c2             c1          c2             hc   
-22 c2-c1-c2-oc          1  4  20 19 #  c2             c1          c2             oc   
-23 hc-c2-c1-oh          32 1  4  2  #  hc             c2          c1             oh   
-24 hc-c1-c2-hc          11 4  1  21 #  hc             c1          c2             hc   
-25 hc-c1-c2-oc          11 4  20 19 #  hc             c1          c2             oc   
-26 hc-c2-c1-oh          9  20 4  2  #  hc             c2          c1             oh   
-27 c2-c1-c2-hc          1  4  20 9  #  c2             c1          c2             hc   
-28 hc-c1-c2-hc          11 4  1  32 #  hc             c1          c2             hc   
-29 c2-c1-c2-hc          20 4  1  21 #  c2             c1          c2             hc   
-30 nn-c2-c1-oh          3  1  4  2  #  nn             c2          c1             oh   
-31 hc-c2-c1-oh          21 1  4  2  #  hc             c2          c1             oh   
-32 hc-c2-c1-oh          10 20 4  2  #  hc             c2          c1             oh   
-33 oc-c2-c1-oh          19 20 4  2  #  oc             c2          c1             oh   
-34 cp-cp-cp-cp          14 13 18 17 #  cp             cp          cp             cp   
-35 cp-cp-cp-cp          15 14 13 18 #  cp             cp          cp             cp   
-36 cp-cp-cp-cp          13 14 15 16 #  cp             cp          cp             cp   
-37 cp-cp-cp-hc          16 15 14 5  #  cp             cp          cp             hc   
-38 hc-cp-cp-hc          5  14 15 6  #  hc             cp          cp             hc   
-39 cp-cp-cp-hc          18 13 14 5  #  cp             cp          cp             hc   
-40 cp-cp-cp-cp          14 15 16 17 #  cp             cp          cp             cp   
-41 cp-cp-cp-hc          13 14 15 6  #  cp             cp          cp             hc   
-42 cp-cp-cp-oc          14 15 16 19 #  cp             cp          cp             oc   
-43 cp-cp-cp-hc          17 16 15 6  #  cp             cp          cp             hc   
-44 hc-cp-cp-oc          6  15 16 19 #  hc             cp          cp             oc   
-45 cp-cp-oc-c2          17 16 19 20 #  cp             cp          oc             c2   
-46 cp-cp-cp-cp          15 16 17 18 #  cp             cp          cp             cp   
-47 cp-cp-oc-c2          15 16 19 20 #  cp             cp          oc             c2   
-48 cp-cp-cp-hc          13 18 17 7  #  cp             cp          cp             hc   
-49 cp-cp-cp-hc          15 16 17 7  #  cp             cp          cp             hc   
-50 hc-cp-cp-oc          7  17 16 19 #  hc             cp          cp             oc   
-51 cp-cp-cp-oc          18 17 16 19 #  cp             cp          cp             oc   
-52 hc-cp-cp-hc          7  17 18 8  #  hc             cp          cp             hc   
-53 cp-cp-cp-cp          13 18 17 16 #  cp             cp          cp             cp   
-54 cp-cp-cp-hc          14 13 18 8  #  cp             cp          cp             hc   
-55 cp-cp-cp-hc          16 17 18 8  #  cp             cp          cp             hc   
-56 hc-c2-oc-cp          9  20 19 16 #  hc             c2          oc             cp   
-57 hc-c1-c2-hc          11 4  20 9  #  hc             c1          c2             hc   
-58 hc-c1-c2-hc          11 4  20 10 #  hc             c1          c2             hc   
-59 hc-c2-oc-cp          10 20 19 16 #  hc             c2          oc             cp   
-60 c1-c2-oc-cp          4  20 19 16 #  c1             c2          oc             cp   
-61 cp-cp-cp-hc          29 24 25 30 #  cp             cp          cp             hc   
-62 cp-cp-cp-cp          25 24 29 28 #  cp             cp          cp             cp   
-63 cp-cp-cp-cp          26 25 24 29 #  cp             cp          cp             cp   
-64 hc-cp-cp-hc          30 25 26 31 #  hc             cp          cp             hc   
-65 cp-cp-cp-cp          24 25 26 27 #  cp             cp          cp             cp   
-66 cp-cp-cp-hc          24 25 26 31 #  cp             cp          cp             hc   
-67 cp-cp-cp-hc          27 26 25 30 #  cp             cp          cp             hc   
-68 cp-cp-cp-cp          25 26 27 28 #  cp             cp          cp             cp   
-69 cp-cp-cp-nn          29 28 27 3  #  cp             cp          cp             nn   
-70 cp-cp-cp-nn          25 26 27 3  #  cp             cp          cp             nn   
-71 hc-cp-cp-nn          22 28 27 3  #  hc             cp          cp             nn   
-72 cp-cp-nn-c2          26 27 3  34 #  cp             cp          nn             c2   
-73 hc-cp-cp-nn          31 26 27 3  #  hc             cp          cp             nn   
-74 cp-cp-cp-cp          26 27 28 29 #  cp             cp          cp             cp   
-75 cp-cp-nn-c2          28 27 3  34 #  cp             cp          nn             c2   
-76 cp-cp-cp-hc          28 27 26 31 #  cp             cp          cp             hc   
-77 hc-cp-cp-hc          22 28 29 23 #  hc             cp          cp             hc   
-78 cp-cp-cp-hc          24 29 28 22 #  cp             cp          cp             hc   
-79 cp-cp-cp-hc          26 27 28 22 #  cp             cp          cp             hc   
-80 cp-cp-cp-hc          27 28 29 23 #  cp             cp          cp             hc   
-81 cp-cp-cp-cp          24 29 28 27 #  cp             cp          cp             cp   
-82 cp-cp-cp-hc          25 24 29 23 #  cp             cp          cp             hc   
-83 hc-c1-c2-hc          44 37 33 43 #  hc             c1          c2             hc   
-84 hc-c2-oc-cp          43 33 36 49 #  hc             c2          oc             cp   
-85 c1-c2-oc-cp          37 33 36 49 #  c1             c2          oc             cp   
-86 hc-c1-c2-oc          44 37 33 36 #  hc             c1          c2             oc   
-87 hc-c1-c2-hc          44 37 33 42 #  hc             c1          c2             hc   
-88 hc-c2-oc-cp          42 33 36 49 #  hc             c2          oc             cp   
-89 c2-c1-c2-nn          33 37 34 3  #  c2             c1          c2             nn   
-90 nn-c2-c1-oh          3  34 37 35 #  nn             c2          c1             oh   
-91 hc-c1-c2-nn          44 37 34 3  #  hc             c1          c2             nn   
-92 cp-cp-oc-c2          48 49 36 33 #  cp             cp          oc             c2   
-93 cp-cp-oc-c2          50 49 36 33 #  cp             cp          oc             c2   
-94 oc-c2-c1-oh          36 33 37 35 #  oc             c2          c1             oh   
-95 hc-c2-c1-oh          53 34 37 35 #  hc             c2          c1             oh   
-96 c2-c1-c2-hc          33 37 34 52 #  c2             c1          c2             hc   
-97 hc-c1-c2-hc          44 37 34 52 #  hc             c1          c2             hc   
-98 c2-c1-c2-hc          34 37 33 42 #  c2             c1          c2             hc   
-99 hc-c2-c1-oh          42 33 37 35 #  hc             c2          c1             oh   
-100 hc-c2-c1-oh          52 34 37 35 #  hc             c2          c1             oh   
-101 c2-c1-oh-ho2         34 37 35 45 #  c2             c1          oh            ho2   
-102 hc-c1-c2-hc          44 37 34 53 #  hc             c1          c2             hc   
-103 hc-c1-oh-ho2         44 37 35 45 #  hc             c1          oh            ho2   
-104 c2-c1-c2-hc          34 37 33 43 #  c2             c1          c2             hc   
-105 c2-c1-c2-oc          34 37 33 36 #  c2             c1          c2             oc   
-106 c2-c1-c2-hc          33 37 34 53 #  c2             c1          c2             hc   
-107 c2-c1-oh-ho2         33 37 35 45 #  c2             c1          oh            ho2   
-108 hc-c2-c1-oh          43 33 37 35 #  hc             c2          c1             oh   
-109 cp-cp-cp-cp          47 46 51 50 #  cp             cp          cp             cp   
-110 cp-cp-cp-hc          51 46 47 38 #  cp             cp          cp             hc   
-111 cp-cp-cp-cp          46 47 48 49 #  cp             cp          cp             cp   
-112 cp-cp-cp-cp          48 47 46 51 #  cp             cp          cp             cp   
-113 cp-cp-cp-hc          49 48 47 38 #  cp             cp          cp             hc   
-114 hc-cp-cp-hc          38 47 48 39 #  hc             cp          cp             hc   
-115 cp-cp-cp-hc          50 49 48 39 #  cp             cp          cp             hc   
-116 cp-cp-cp-hc          46 47 48 39 #  cp             cp          cp             hc   
-117 cp-cp-cp-cp          47 48 49 50 #  cp             cp          cp             cp   
-118 cp-cp-cp-oc          47 48 49 36 #  cp             cp          cp             oc   
-119 hc-cp-cp-oc          40 50 49 36 #  hc             cp          cp             oc   
-120 cp-cp-cp-oc          51 50 49 36 #  cp             cp          cp             oc   
-121 cp-cp-cp-cp          48 49 50 51 #  cp             cp          cp             cp   
-122 hc-cp-cp-oc          39 48 49 36 #  hc             cp          cp             oc   
-123 cp-cp-cp-hc          48 49 50 40 #  cp             cp          cp             hc   
-124 hc-cp-cp-hc          40 50 51 41 #  hc             cp          cp             hc   
-125 cp-cp-cp-hc          46 51 50 40 #  cp             cp          cp             hc   
-126 cp-cp-cp-cp          46 51 50 49 #  cp             cp          cp             cp   
-127 cp-cp-cp-hc          49 50 51 41 #  cp             cp          cp             hc   
-128 cp-cp-cp-hc          47 46 51 41 #  cp             cp          cp             hc   
+1  hc-c2-nn-c2          21 1  3  34 #  hc             c2          nn             c2
+2  hc-c2-nn-c2          32 1  3  34 #  hc             c2          nn             c2
+3  hc-c2-nn-cp          21 1  3  27 #  hc             c2          nn             cp
+4  c1-c2-nn-cp          4  1  3  27 #  c1             c2          nn             cp
+5  hc-c1-c2-nn          11 4  1  3  #  hc             c1          c2             nn
+6  c2-c1-c2-nn          20 4  1  3  #  c2             c1          c2             nn
+7  c1-c2-nn-c2          4  1  3  34 #  c1             c2          nn             c2
+8  c2-c1-oh-ho2         20 4  2  12 #  c2             c1          oh            ho2
+9  hc-c2-nn-c2          53 34 3  1  #  hc             c2          nn             c2
+10 c1-c2-nn-c2          37 34 3  1  #  c1             c2          nn             c2
+11 hc-c2-nn-cp          52 34 3  27 #  hc             c2          nn             cp
+12 hc-c2-nn-cp          32 1  3  27 #  hc             c2          nn             cp
+13 hc-c2-nn-c2          52 34 3  1  #  hc             c2          nn             c2
+14 hc-c2-nn-cp          53 34 3  27 #  hc             c2          nn             cp
+15 cp-cp-nn-c2          26 27 3  1  #  cp             cp          nn             c2
+16 c1-c2-nn-cp          37 34 3  27 #  c1             c2          nn             cp
+17 cp-cp-nn-c2          28 27 3  1  #  cp             cp          nn             c2
+18 hc-c1-oh-ho2         11 4  2  12 #  hc             c1          oh            ho2
+19 c2-c1-oh-ho2         1  4  2  12 #  c2             c1          oh            ho2
+20 c2-c1-c2-hc          20 4  1  32 #  c2             c1          c2             hc
+21 c2-c1-c2-hc          1  4  20 10 #  c2             c1          c2             hc
+22 c2-c1-c2-oc          1  4  20 19 #  c2             c1          c2             oc
+23 hc-c2-c1-oh          32 1  4  2  #  hc             c2          c1             oh
+24 hc-c1-c2-hc          11 4  1  21 #  hc             c1          c2             hc
+25 hc-c1-c2-oc          11 4  20 19 #  hc             c1          c2             oc
+26 hc-c2-c1-oh          9  20 4  2  #  hc             c2          c1             oh
+27 c2-c1-c2-hc          1  4  20 9  #  c2             c1          c2             hc
+28 hc-c1-c2-hc          11 4  1  32 #  hc             c1          c2             hc
+29 c2-c1-c2-hc          20 4  1  21 #  c2             c1          c2             hc
+30 nn-c2-c1-oh          3  1  4  2  #  nn             c2          c1             oh
+31 hc-c2-c1-oh          21 1  4  2  #  hc             c2          c1             oh
+32 hc-c2-c1-oh          10 20 4  2  #  hc             c2          c1             oh
+33 oc-c2-c1-oh          19 20 4  2  #  oc             c2          c1             oh
+34 cp-cp-cp-cp          14 13 18 17 #  cp             cp          cp             cp
+35 cp-cp-cp-cp          15 14 13 18 #  cp             cp          cp             cp
+36 cp-cp-cp-cp          13 14 15 16 #  cp             cp          cp             cp
+37 cp-cp-cp-hc          16 15 14 5  #  cp             cp          cp             hc
+38 hc-cp-cp-hc          5  14 15 6  #  hc             cp          cp             hc
+39 cp-cp-cp-hc          18 13 14 5  #  cp             cp          cp             hc
+40 cp-cp-cp-cp          14 15 16 17 #  cp             cp          cp             cp
+41 cp-cp-cp-hc          13 14 15 6  #  cp             cp          cp             hc
+42 cp-cp-cp-oc          14 15 16 19 #  cp             cp          cp             oc
+43 cp-cp-cp-hc          17 16 15 6  #  cp             cp          cp             hc
+44 hc-cp-cp-oc          6  15 16 19 #  hc             cp          cp             oc
+45 cp-cp-oc-c2          17 16 19 20 #  cp             cp          oc             c2
+46 cp-cp-cp-cp          15 16 17 18 #  cp             cp          cp             cp
+47 cp-cp-oc-c2          15 16 19 20 #  cp             cp          oc             c2
+48 cp-cp-cp-hc          13 18 17 7  #  cp             cp          cp             hc
+49 cp-cp-cp-hc          15 16 17 7  #  cp             cp          cp             hc
+50 hc-cp-cp-oc          7  17 16 19 #  hc             cp          cp             oc
+51 cp-cp-cp-oc          18 17 16 19 #  cp             cp          cp             oc
+52 hc-cp-cp-hc          7  17 18 8  #  hc             cp          cp             hc
+53 cp-cp-cp-cp          13 18 17 16 #  cp             cp          cp             cp
+54 cp-cp-cp-hc          14 13 18 8  #  cp             cp          cp             hc
+55 cp-cp-cp-hc          16 17 18 8  #  cp             cp          cp             hc
+56 hc-c2-oc-cp          9  20 19 16 #  hc             c2          oc             cp
+57 hc-c1-c2-hc          11 4  20 9  #  hc             c1          c2             hc
+58 hc-c1-c2-hc          11 4  20 10 #  hc             c1          c2             hc
+59 hc-c2-oc-cp          10 20 19 16 #  hc             c2          oc             cp
+60 c1-c2-oc-cp          4  20 19 16 #  c1             c2          oc             cp
+61 cp-cp-cp-hc          29 24 25 30 #  cp             cp          cp             hc
+62 cp-cp-cp-cp          25 24 29 28 #  cp             cp          cp             cp
+63 cp-cp-cp-cp          26 25 24 29 #  cp             cp          cp             cp
+64 hc-cp-cp-hc          30 25 26 31 #  hc             cp          cp             hc
+65 cp-cp-cp-cp          24 25 26 27 #  cp             cp          cp             cp
+66 cp-cp-cp-hc          24 25 26 31 #  cp             cp          cp             hc
+67 cp-cp-cp-hc          27 26 25 30 #  cp             cp          cp             hc
+68 cp-cp-cp-cp          25 26 27 28 #  cp             cp          cp             cp
+69 cp-cp-cp-nn          29 28 27 3  #  cp             cp          cp             nn
+70 cp-cp-cp-nn          25 26 27 3  #  cp             cp          cp             nn
+71 hc-cp-cp-nn          22 28 27 3  #  hc             cp          cp             nn
+72 cp-cp-nn-c2          26 27 3  34 #  cp             cp          nn             c2
+73 hc-cp-cp-nn          31 26 27 3  #  hc             cp          cp             nn
+74 cp-cp-cp-cp          26 27 28 29 #  cp             cp          cp             cp
+75 cp-cp-nn-c2          28 27 3  34 #  cp             cp          nn             c2
+76 cp-cp-cp-hc          28 27 26 31 #  cp             cp          cp             hc
+77 hc-cp-cp-hc          22 28 29 23 #  hc             cp          cp             hc
+78 cp-cp-cp-hc          24 29 28 22 #  cp             cp          cp             hc
+79 cp-cp-cp-hc          26 27 28 22 #  cp             cp          cp             hc
+80 cp-cp-cp-hc          27 28 29 23 #  cp             cp          cp             hc
+81 cp-cp-cp-cp          24 29 28 27 #  cp             cp          cp             cp
+82 cp-cp-cp-hc          25 24 29 23 #  cp             cp          cp             hc
+83 hc-c1-c2-hc          44 37 33 43 #  hc             c1          c2             hc
+84 hc-c2-oc-cp          43 33 36 49 #  hc             c2          oc             cp
+85 c1-c2-oc-cp          37 33 36 49 #  c1             c2          oc             cp
+86 hc-c1-c2-oc          44 37 33 36 #  hc             c1          c2             oc
+87 hc-c1-c2-hc          44 37 33 42 #  hc             c1          c2             hc
+88 hc-c2-oc-cp          42 33 36 49 #  hc             c2          oc             cp
+89 c2-c1-c2-nn          33 37 34 3  #  c2             c1          c2             nn
+90 nn-c2-c1-oh          3  34 37 35 #  nn             c2          c1             oh
+91 hc-c1-c2-nn          44 37 34 3  #  hc             c1          c2             nn
+92 cp-cp-oc-c2          48 49 36 33 #  cp             cp          oc             c2
+93 cp-cp-oc-c2          50 49 36 33 #  cp             cp          oc             c2
+94 oc-c2-c1-oh          36 33 37 35 #  oc             c2          c1             oh
+95 hc-c2-c1-oh          53 34 37 35 #  hc             c2          c1             oh
+96 c2-c1-c2-hc          33 37 34 52 #  c2             c1          c2             hc
+97 hc-c1-c2-hc          44 37 34 52 #  hc             c1          c2             hc
+98 c2-c1-c2-hc          34 37 33 42 #  c2             c1          c2             hc
+99 hc-c2-c1-oh          42 33 37 35 #  hc             c2          c1             oh
+100 hc-c2-c1-oh          52 34 37 35 #  hc             c2          c1             oh
+101 c2-c1-oh-ho2         34 37 35 45 #  c2             c1          oh            ho2
+102 hc-c1-c2-hc          44 37 34 53 #  hc             c1          c2             hc
+103 hc-c1-oh-ho2         44 37 35 45 #  hc             c1          oh            ho2
+104 c2-c1-c2-hc          34 37 33 43 #  c2             c1          c2             hc
+105 c2-c1-c2-oc          34 37 33 36 #  c2             c1          c2             oc
+106 c2-c1-c2-hc          33 37 34 53 #  c2             c1          c2             hc
+107 c2-c1-oh-ho2         33 37 35 45 #  c2             c1          oh            ho2
+108 hc-c2-c1-oh          43 33 37 35 #  hc             c2          c1             oh
+109 cp-cp-cp-cp          47 46 51 50 #  cp             cp          cp             cp
+110 cp-cp-cp-hc          51 46 47 38 #  cp             cp          cp             hc
+111 cp-cp-cp-cp          46 47 48 49 #  cp             cp          cp             cp
+112 cp-cp-cp-cp          48 47 46 51 #  cp             cp          cp             cp
+113 cp-cp-cp-hc          49 48 47 38 #  cp             cp          cp             hc
+114 hc-cp-cp-hc          38 47 48 39 #  hc             cp          cp             hc
+115 cp-cp-cp-hc          50 49 48 39 #  cp             cp          cp             hc
+116 cp-cp-cp-hc          46 47 48 39 #  cp             cp          cp             hc
+117 cp-cp-cp-cp          47 48 49 50 #  cp             cp          cp             cp
+118 cp-cp-cp-oc          47 48 49 36 #  cp             cp          cp             oc
+119 hc-cp-cp-oc          40 50 49 36 #  hc             cp          cp             oc
+120 cp-cp-cp-oc          51 50 49 36 #  cp             cp          cp             oc
+121 cp-cp-cp-cp          48 49 50 51 #  cp             cp          cp             cp
+122 hc-cp-cp-oc          39 48 49 36 #  hc             cp          cp             oc
+123 cp-cp-cp-hc          48 49 50 40 #  cp             cp          cp             hc
+124 hc-cp-cp-hc          40 50 51 41 #  hc             cp          cp             hc
+125 cp-cp-cp-hc          46 51 50 40 #  cp             cp          cp             hc
+126 cp-cp-cp-cp          46 51 50 49 #  cp             cp          cp             cp
+127 cp-cp-cp-hc          49 50 51 41 #  cp             cp          cp             hc
+128 cp-cp-cp-hc          47 46 51 41 #  cp             cp          cp             hc
 
 Impropers
 
-1  c2-nn-c2-cp-nb==3         1  3  34 27 #  c2             nn          c2          cp          nb==3   
-2  cp-cp-cp-hc-nb==3         13 14 15 5  #  cp             cp          cp          hc          nb==3   
-3  cp-cp-cp-hc-nb==3         14 15 16 6  #  cp             cp          cp          hc          nb==3   
-4  cp-cp-cp-oc-nb==3         15 16 17 19 #  cp             cp          cp          oc          nb==3   
-5  cp-cp-cp-hc-nb==3         16 17 18 7  #  cp             cp          cp          hc          nb==3   
-6  cp-cp-cp-hc-nb==3         13 18 17 8  #  cp             cp          cp          hc          nb==3   
-7  cp-cp-cp-hc-nb==3         24 25 26 30 #  cp             cp          cp          hc          nb==3   
-8  cp-cp-cp-hc-nb==3         25 26 27 31 #  cp             cp          cp          hc          nb==3   
-9  cp-cp-cp-nn-nb==3         26 27 28 3  #  cp             cp          cp          nn          nb==3   
-10 cp-cp-cp-hc-nb==3         27 28 29 22 #  cp             cp          cp          hc          nb==3   
-11 cp-cp-cp-hc-nb==3         24 29 28 23 #  cp             cp          cp          hc          nb==3   
-12 cp-cp-cp-hc-nb==3         46 47 48 38 #  cp             cp          cp          hc          nb==3   
-13 cp-cp-cp-hc-nb==3         47 48 49 39 #  cp             cp          cp          hc          nb==3   
-14 cp-cp-cp-oc-nb==3         48 49 50 36 #  cp             cp          cp          oc          nb==3   
-15 cp-cp-cp-hc-nb==3         49 50 51 40 #  cp             cp          cp          hc          nb==3   
-16 cp-cp-cp-hc-nb==3         46 51 50 41 #  cp             cp          cp          hc          nb==3   
-17 c1-c2-hc-hc-nb!=3         4  1  21 32 #  c1             c2          hc          hc          nb!=3   
-18 c1-c2-hc-nn-nb!=3         4  1  32 3  #  c1             c2          hc          nn          nb!=3   
-19 hc-c2-hc-nn-nb!=3         21 1  32 3  #  hc             c2          hc          nn          nb!=3   
-20 c1-c2-hc-nn-nb!=3         4  1  21 3  #  c1             c2          hc          nn          nb!=3   
-21 c2-c1-hc-oh-nb!=3         20 4  11 2  #  c2             c1          hc          oh          nb!=3   
-22 c2-c1-c2-hc-nb!=3         1  4  20 11 #  c2             c1          c2          hc          nb!=3   
-23 c2-c1-hc-oh-nb!=3         1  4  11 2  #  c2             c1          hc          oh          nb!=3   
-24 c2-c1-c2-oh-nb!=3         1  4  20 2  #  c2             c1          c2          oh          nb!=3   
-25 c1-c2-hc-oc-nb!=3         4  20 10 19 #  c1             c2          hc          oc          nb!=3   
-26 c1-c2-hc-hc-nb!=3         4  20 9  10 #  c1             c2          hc          hc          nb!=3   
-27 hc-c2-hc-oc-nb!=3         9  20 10 19 #  hc             c2          hc          oc          nb!=3   
-28 c1-c2-hc-oc-nb!=3         4  20 9  19 #  c1             c2          hc          oc          nb!=3   
-29 c1-c2-hc-oc-nb!=3         37 33 42 36 #  c1             c2          hc          oc          nb!=3   
-30 c1-c2-hc-hc-nb!=3         37 33 42 43 #  c1             c2          hc          hc          nb!=3   
-31 hc-c2-hc-oc-nb!=3         42 33 43 36 #  hc             c2          hc          oc          nb!=3   
-32 c1-c2-hc-oc-nb!=3         37 33 43 36 #  c1             c2          hc          oc          nb!=3   
-33 c1-c2-hc-hc-nb!=3         37 34 52 53 #  c1             c2          hc          hc          nb!=3   
-34 c1-c2-hc-nn-nb!=3         37 34 53 3  #  c1             c2          hc          nn          nb!=3   
-35 hc-c2-hc-nn-nb!=3         52 34 53 3  #  hc             c2          hc          nn          nb!=3   
-36 c1-c2-hc-nn-nb!=3         37 34 52 3  #  c1             c2          hc          nn          nb!=3   
-37 c2-c1-hc-oh-nb!=3         34 37 44 35 #  c2             c1          hc          oh          nb!=3   
-38 c2-c1-hc-oh-nb!=3         33 37 44 35 #  c2             c1          hc          oh          nb!=3   
-39 c2-c1-c2-oh-nb!=3         33 37 34 35 #  c2             c1          c2          oh          nb!=3   
-40 c2-c1-c2-hc-nb!=3         33 37 34 44 #  c2             c1          c2          hc          nb!=3   
+1  c2-nn-c2-cp-nb==3         1  3  34 27 #  c2             nn          c2          cp          nb==3
+2  cp-cp-cp-hc-nb==3         13 14 15 5  #  cp             cp          cp          hc          nb==3
+3  cp-cp-cp-hc-nb==3         14 15 16 6  #  cp             cp          cp          hc          nb==3
+4  cp-cp-cp-oc-nb==3         15 16 17 19 #  cp             cp          cp          oc          nb==3
+5  cp-cp-cp-hc-nb==3         16 17 18 7  #  cp             cp          cp          hc          nb==3
+6  cp-cp-cp-hc-nb==3         13 18 17 8  #  cp             cp          cp          hc          nb==3
+7  cp-cp-cp-hc-nb==3         24 25 26 30 #  cp             cp          cp          hc          nb==3
+8  cp-cp-cp-hc-nb==3         25 26 27 31 #  cp             cp          cp          hc          nb==3
+9  cp-cp-cp-nn-nb==3         26 27 28 3  #  cp             cp          cp          nn          nb==3
+10 cp-cp-cp-hc-nb==3         27 28 29 22 #  cp             cp          cp          hc          nb==3
+11 cp-cp-cp-hc-nb==3         24 29 28 23 #  cp             cp          cp          hc          nb==3
+12 cp-cp-cp-hc-nb==3         46 47 48 38 #  cp             cp          cp          hc          nb==3
+13 cp-cp-cp-hc-nb==3         47 48 49 39 #  cp             cp          cp          hc          nb==3
+14 cp-cp-cp-oc-nb==3         48 49 50 36 #  cp             cp          cp          oc          nb==3
+15 cp-cp-cp-hc-nb==3         49 50 51 40 #  cp             cp          cp          hc          nb==3
+16 cp-cp-cp-hc-nb==3         46 51 50 41 #  cp             cp          cp          hc          nb==3
+17 c1-c2-hc-hc-nb!=3         4  1  21 32 #  c1             c2          hc          hc          nb!=3
+18 c1-c2-hc-nn-nb!=3         4  1  32 3  #  c1             c2          hc          nn          nb!=3
+19 hc-c2-hc-nn-nb!=3         21 1  32 3  #  hc             c2          hc          nn          nb!=3
+20 c1-c2-hc-nn-nb!=3         4  1  21 3  #  c1             c2          hc          nn          nb!=3
+21 c2-c1-hc-oh-nb!=3         20 4  11 2  #  c2             c1          hc          oh          nb!=3
+22 c2-c1-c2-hc-nb!=3         1  4  20 11 #  c2             c1          c2          hc          nb!=3
+23 c2-c1-hc-oh-nb!=3         1  4  11 2  #  c2             c1          hc          oh          nb!=3
+24 c2-c1-c2-oh-nb!=3         1  4  20 2  #  c2             c1          c2          oh          nb!=3
+25 c1-c2-hc-oc-nb!=3         4  20 10 19 #  c1             c2          hc          oc          nb!=3
+26 c1-c2-hc-hc-nb!=3         4  20 9  10 #  c1             c2          hc          hc          nb!=3
+27 hc-c2-hc-oc-nb!=3         9  20 10 19 #  hc             c2          hc          oc          nb!=3
+28 c1-c2-hc-oc-nb!=3         4  20 9  19 #  c1             c2          hc          oc          nb!=3
+29 c1-c2-hc-oc-nb!=3         37 33 42 36 #  c1             c2          hc          oc          nb!=3
+30 c1-c2-hc-hc-nb!=3         37 33 42 43 #  c1             c2          hc          hc          nb!=3
+31 hc-c2-hc-oc-nb!=3         42 33 43 36 #  hc             c2          hc          oc          nb!=3
+32 c1-c2-hc-oc-nb!=3         37 33 43 36 #  c1             c2          hc          oc          nb!=3
+33 c1-c2-hc-hc-nb!=3         37 34 52 53 #  c1             c2          hc          hc          nb!=3
+34 c1-c2-hc-nn-nb!=3         37 34 53 3  #  c1             c2          hc          nn          nb!=3
+35 hc-c2-hc-nn-nb!=3         52 34 53 3  #  hc             c2          hc          nn          nb!=3
+36 c1-c2-hc-nn-nb!=3         37 34 52 3  #  c1             c2          hc          nn          nb!=3
+37 c2-c1-hc-oh-nb!=3         34 37 44 35 #  c2             c1          hc          oh          nb!=3
+38 c2-c1-hc-oh-nb!=3         33 37 44 35 #  c2             c1          hc          oh          nb!=3
+39 c2-c1-c2-oh-nb!=3         33 37 34 35 #  c2             c1          c2          oh          nb!=3
+40 c2-c1-c2-hc-nb!=3         33 37 34 44 #  c2             c1          c2          hc          nb!=3
