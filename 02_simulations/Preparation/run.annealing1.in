@@ -8,9 +8,9 @@ read_data       system_equil-small2.data
 
 # --- Annealing setup and first step---
 
-thermo          1000
+thermo          $(1000/dt)
 thermo_style    custom step temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
-dump            1 all custom 100000 annealing1.dump id mol type x y z ix iy iz
+dump            1 all custom $(100000/dt) annealing1.dump id mol type x y z ix iy iz
 
 minimize        1.0e-4 1.0e-6 1000 100000
 

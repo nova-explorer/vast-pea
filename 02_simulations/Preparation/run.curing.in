@@ -16,7 +16,7 @@ read_data       system_equil.data2 &
 
 variable        runtime equal 10 # ns
 
-dump            1 all custom 10000 poly.dump id mol type x y z ix iy iz
+dump            1 all custom $(10000/dt) poly.dump id mol type x y z ix iy iz
 
 molecule        p1_pre poly1_pre.lmpmol
 molecule        p1_post poly1_post.lmpmol
@@ -26,9 +26,9 @@ molecule        p2_post poly2_post.lmpmol
 
 fix             rxn all bond/react stabilization yes npt_grp 0.03 &
                     react rxn1 all 10 0.5 3.5 p1_pre p1_post poly1.map &
-                        stabilize_steps 500 &
+                        stabilize_steps $(500/dt) &
                     react rxn2 all 10 0.5 5 p2_pre p2_post poly2.map &
-                        stabilize_steps 500
+                        stabilize_steps $(500/dt)
 fix             rxnvt npt_grp_REACT npt temp $Y $Y 100 iso 1 1 1000
 fix             rxrscl bond_react_MASTER_group temp/rescale 1 $Y $Y 1 1
 
@@ -63,7 +63,7 @@ variable        pr100 equal 0
 variable        check equal 100 # timesteps between checks for level of conversion
 variable        i equal (v_runtime*1e6/dt)/v_check # number of steps needed to reach 10ns
 
-thermo          100
+thermo          $(100/dt)
 thermo_style    custom step v_n1 v_n2 v_prxn temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
 
 # --- Curing loop ---
