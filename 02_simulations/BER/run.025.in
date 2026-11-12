@@ -36,7 +36,7 @@ thermo          $(1000/dt)
 thermo_style    custom step f_rxn[*] temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density v_prob
 dump            1 all custom $(10/dt) ber${nbrun}.dump id mol type x y z ix iy iz
 
-# dumps which sulfur are currently bonded to calculated BER dynamics
+# dumps which sulfur are currently bonded to calculate BER dynamics
 group           ber type 14
 compute         btype ber property/local btype
 compute         batom1 ber property/local batom1
