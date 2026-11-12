@@ -18,8 +18,8 @@ neighbor        2.0 bin
 neigh_modify    delay 0 every 1 check yes one 5000 page 100000
 
 # --- Definitions ---
-variable        T    equal  300 # Temperature used in early equilibration runs and after annealing
-variable        Y    equal  600 # Temperature used during annealing, curing and replicating
+variable        T equal 300 # Temperature used in early equilibration runs and after annealing
+variable        Y equal 600 # Temperature used during annealing, curing and replicating
 variable        nmax equal 1344 # Total number of curing reactions possible used to calculate conversion level during curing
 
 timestep        0.5
