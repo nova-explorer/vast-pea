@@ -1,0 +1,144 @@
+# Curing simulation
+# Adapted from the REACTER example scripts
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_equil.data2 &
+                extra/special/per/atom 20 &
+                extra/bond/per/atom 10 &
+                extra/angle/per/atom 20 &
+                extra/dihedral/per/atom 50 &
+                extra/improper/per/atom 20
+
+# --- Curing setup ---
+
+variable        runtime equal 10 # ns
+
+dump            1 all custom 10000 poly.dump id mol type x y z ix iy iz
+
+molecule        p1_pre poly1_pre.lmpmol
+molecule        p1_post poly1_post.lmpmol
+
+molecule        p2_pre poly2_pre.lmpmol
+molecule        p2_post poly2_post.lmpmol
+
+fix             rxn all bond/react stabilization yes npt_grp 0.03 &
+                    react rxn1 all 10 0.5 3.5 p1_pre p1_post poly1.map &
+                        stabilize_steps 500 &
+                    react rxn2 all 10 0.5 5 p2_pre p2_post poly2.map &
+                        stabilize_steps 500
+fix             rxnvt npt_grp_REACT npt temp $Y $Y 100 iso 1 1 1000
+fix             rxrscl bond_react_MASTER_group temp/rescale 1 $Y $Y 1 1
+
+# for measuring the level of conversion
+variable        n1 equal f_rxn[1]
+variable        n2 equal f_rxn[2]
+variable        trxn equal v_n1+v_n2
+variable        prxn equal 100*(v_trxn/v_nmax) # level of conversion in %
+
+# flags for saving data files at different level of conversions
+variable        pr25 equal 0
+variable        pr50 equal 0
+variable        pr75 equal 0
+variable        pr80 equal 0
+variable        pr85 equal 0
+variable        pr86 equal 0
+variable        pr87 equal 0
+variable        pr88 equal 0
+variable        pr89 equal 0
+variable        pr90 equal 0
+variable        pr91 equal 0
+variable        pr92 equal 0
+variable        pr93 equal 0
+variable        pr94 equal 0
+variable        pr95 equal 0
+variable        pr96 equal 0
+variable        pr97 equal 0
+variable        pr98 equal 0
+variable        pr99 equal 0
+variable        pr100 equal 0
+
+variable        check equal 100 # timesteps between checks for level of conversion
+variable        i equal (v_runtime*1e6/dt)/v_check # number of steps needed to reach 10ns
+
+thermo          100
+thermo_style    custom step v_n1 v_n2 v_prxn temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
+
+# --- Curing loop ---
+
+variable a loop $i
+label loop1
+
+    run ${check}
+    if "${prxn}>=24 && ${prxn}<=26 && ${pr25}==0" then &
+        "write_data system_poly_25.data nofix" &
+        "variable pr25 equal 1" &
+    elif "${prxn}>=49 && ${prxn}<=51 && ${pr50}==0" &
+        "write_data system_poly_50.data nofix" &
+        "variable pr50 equal 1" &
+    elif "${prxn}>=74 && ${prxn}<=76 && ${pr75}==0" &
+        "write_data system_poly_75.data nofix" &
+        "variable pr75 equal 1" &
+    elif "${prxn}>=79 && ${prxn}<=81 && ${pr80}==0" &
+        "write_data system_poly_80.data nofix" &
+        "variable pr80 equal 1" &
+    elif "${prxn}>=84 && ${prxn}<=85.5 && ${pr85}==0" &
+        "write_data system_poly_85.data nofix" &
+        "variable pr85 equal 1" &
+    elif "${prxn}>=85.9 && ${prxn}<=86.5 && ${pr86}==0" &
+        "write_data system_poly_86.data nofix" &
+        "variable pr86 equal 1" &
+    elif "${prxn}>=86.9 && ${prxn}<=87.5 && ${pr87}==0" &
+        "write_data system_poly_87.data nofix" &
+        "variable pr87 equal 1" &
+    elif "${prxn}>=87.9 && ${prxn}<=88.5 && ${pr88}==0" &
+        "write_data system_poly_88.data nofix" &
+        "variable pr88 equal 1" &
+    elif "${prxn}>=88.9 && ${prxn}<=89.5 && ${pr89}==0" &
+        "write_data system_poly_89.data nofix" &
+        "variable pr89 equal 1" &
+    elif "${prxn}>=89.9 && ${prxn}<=90.5 && ${pr90}==0" &
+        "write_data system_poly_90.data nofix" &
+        "variable pr90 equal 1" &
+    elif "${prxn}>=90.9 && ${prxn}<=91.5 && ${pr91}==0" &
+        "write_data system_poly_91.data nofix" &
+        "variable pr91 equal 1" &
+    elif "${prxn}>=91.9 && ${prxn}<=92.5 && ${pr92}==0" &
+        "write_data system_poly_92.data nofix" &
+        "variable pr92 equal 1" &
+    elif "${prxn}>=92.9 && ${prxn}<=93.5 && ${pr93}==0" &
+        "write_data system_poly_93.data nofix" &
+        "variable pr93 equal 1" &
+    elif "${prxn}>=93.9 && ${prxn}<=94.5 && ${pr94}==0" &
+        "write_data system_poly_94.data nofix" &
+        "variable pr94 equal 1" &
+    elif "${prxn}>=94.9 && ${prxn}<=95.5 && ${pr95}==0" &
+        "write_data system_poly_95.data nofix" &
+        "variable pr95 equal 1" &
+    elif "${prxn}>=95.9 && ${prxn}<=96.5 && ${pr96}==0" &
+        "write_data system_poly96.data nofix" &
+        "variable pr96 equal 1" &
+    elif "${prxn}>=96.9 && ${prxn}<=97.5 && ${pr97}==0" &
+        "write_data system_poly_97.data nofix" &
+        "variable pr97 equal 1" &
+    elif "${prxn}>=97.9 && ${prxn}<=98.5 && ${pr98}==0" &
+        "write_data system_poly_98.data nofix" &
+        "variable pr98 equal 1" &
+    elif "${prxn}>=98.9 && ${prxn}<=99.5 && ${pr99}==0" &
+        "write_data system_poly_99.data nofix" &
+        "variable pr99 equal 1" &
+    elif "${prxn}==100 && ${pr100}==0" &
+        "write_data system_poly_100.data nofix" &
+        "variable pr100 equal 1" &
+        "jump run.poly.in break"
+next a
+jump SELF loop1
+
+unfix           rxnvt
+unfix           rxrscl
+unfix           rxn
+
+label break
+

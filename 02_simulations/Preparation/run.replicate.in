@@ -1,0 +1,27 @@
+# Replicate the system 8x and equilibrates it at high temperature for curing
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_annealing1.data
+
+# --- Replicating 8x ---
+
+replicate       2 2 2 bond/periodic
+
+minimize        1.0e-4 1.0e-6 1000 100000
+
+# --- Equilibration BIG ---
+
+fix             fxnpt all npt temp $Y $Y 100 iso 1 1 1000
+
+thermo          10000
+thermo_style    custom step temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
+dump            1 all custom 100000 replicate.dump id mol type x y z ix iy iz
+
+run             $(10e6/dt) # 10 ns
+unfix           fxnpt
+undump          1
+
+write_data      system_equil.data nofix

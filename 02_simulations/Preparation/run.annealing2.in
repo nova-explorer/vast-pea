@@ -1,0 +1,51 @@
+# Annealing procedure followed by equilibration to help density converge
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_poly_90_2.data
+
+# --- Annealing setup and first step---
+
+thermo          1000
+thermo_style    custom step temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
+dump            1 all custom 100000 annealing2.dump id mol type x y z ix iy iz
+
+minimize        1.0e-4 1.0e-6 1000 100000
+
+fix             fxnpt all npt temp 1 1 100 iso 1 1 1000
+run             $(5e5/dt) # 0.5 ns
+unfix           fxnpt
+
+minimize        1.0e-4 1.0e-6 1000 100000
+
+# --- Annealing loop ---
+variable a loop 20
+label loop
+
+    fix             fxnpt all npt temp $Y $Y  100 iso 1 1 1000
+    run             $(5e5/dt) # 0.5 ns
+    unfix           fxnpt
+
+    minimize        1.0e-4 1.0e-6 1000 100000
+
+    fix             fxnpt all npt temp 1 1 100 iso 1 1 1000
+    run             $(5e5/dt) # 0.5 ns
+    unfix           fxnpt
+
+    minimize        1.0e-4 1.0e-6 1000 100000
+
+    write_restart      system_annealing2.$a.restart
+
+
+next a
+jump run.annealing2.in loop
+
+# --- Equilibration  ---
+
+fix             fxnpt all npt temp $T $T 100 iso 1 1 1000
+run             $(4e6/dt) # 4 ns
+unfix           fxnpt
+
+write_data      system_annealing2.data nofix

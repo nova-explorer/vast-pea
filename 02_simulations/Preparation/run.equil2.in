@@ -1,0 +1,33 @@
+# Relax the new resized box and let density converge
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_equil-small1_centered.data
+
+# --- Equilibration SMALL ---
+
+minimize        1.0e-4 1.0e-6 1000 100000
+
+# relax the new resized box
+fix             fxnvt all nvt temp $T $T 100
+
+thermo          1000
+thermo_style    custom step temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
+dump            1 all custom 1000 equil2.dump id mol type x y z ix iy iz
+
+run             $(1e6/dt) # 1 ns
+unfix           fxnvt
+
+# let density converge
+fix 		    fxnpt all npt temp $T $T 100 iso 1 1 1000
+
+run		        $(2e6/dt) # 2 ns
+
+unfix		    fxnpt
+
+undump          1
+
+write_data      system_equil-small2.data nofix
+
