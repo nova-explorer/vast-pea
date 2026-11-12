@@ -1,0 +1,91 @@
+# Dilatometry-like simulation protocol
+# Since those simulations are long, the nbrun variable is used to quickly change output names and not overwrite the previous ones
+# The maxT and minT variables can also be used to resume the simulations at lower temperatures using the restart files generated.
+# It is highly unrealistic to run the full 44ns in one go especially with 0.5fs timestep and short max walltime, so it is better to run from 600K to 500K, remove the Equilibration section and resume on another submission starting at 480K
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_annealing3.data &
+                extra/special/per/atom 20 &
+                extra/bond/per/atom 10 &
+                extra/angle/per/atom 20 &
+                extra/dihedral/per/atom 50 &
+                extra/improper/per/atom 20
+
+variable 	    nbrun equal 1 # used to change output names
+
+variable        maxT equal 600 # starting temperature
+variable        minT equal 200 # ending temperature
+variable        stepT equal 20 # temperature decrease step
+
+variable        nbsteps equal (${maxT}-${minT})/${stepT} # number of temperature steps to run
+variable        T equal ${maxT} # initialize T variable
+
+# --- BER setup ---
+
+molecule        ber_pre  ber_pre.lmpmol
+molecule        ber_post ber_post.lmpmol
+
+fix             rxn all bond/react stabilization yes npt_grp 0.03 &
+                    react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map &
+                        stabilize_steps $(500/dt)
+fix             rxnpt npt_grp_REACT npt temp $T $T 100 iso 1 1 1000
+fix             rxrscl bond_react_MASTER_group temp/rescale 1 $T $T 1 1
+
+# variables used for calculating the probability of reaction
+variable        w equal 20
+variable        pTv equal 0.9
+variable        Tv equal 372.3
+variable        beta equal ${pTv}/(1-${pTv})
+variable        alpha equal ${beta}/${w}/2
+variable        prob equal 1/(exp(-${alpha}*(${T}-${Tv})-ln(${beta}))+1)
+
+thermo          $(1000/dt)
+thermo_style    custom step f_rxn[*] temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density v_prob
+dump            1 all custom $(10000/dt) tg${nbrun}.dump id mol type x y z ix iy iz
+
+# dumps which sulfur are currently bonded
+group           ber type 14
+compute         btype ber property/local btype
+compute         batom1 ber property/local batom1
+compute         batom2 ber property/local batom2
+dump            2 all local $(10000/dt) bonds${nbrun}.dump c_btype c_batom1 c_batom2
+
+# --- Equilibration at highest temperature ---
+# Remove when restarting from a lower temperature
+
+run             $(4e6/dt) # 4 ns
+
+write_restart   system_tg.pre.restart
+write_data      system_tg.pre.data nofix
+
+unfix           rxnpt
+unfix           rxrscl
+unfix           rxn
+
+# --- Cooling loop ---
+
+variable a loop 0 ${nbsteps}
+label loop
+
+    variable T equal ${maxT}-${stepT}*$a
+
+    fix             rxn all bond/react stabilization yes npt_grp 0.03 &
+                    react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map &
+                        stabilize_steps $(500/dt)
+    fix             rxnpt npt_grp_REACT npt temp $T $T 100 iso 1 1 1000
+    fix             rxrscl bond_react_MASTER_group temp/rescale 1 $T $T 1 1
+
+    run             $(2e6/dt) # 2 ns
+
+    write_restart   system_tg.$T.restart
+    write_data      system_tg.$T.data nofix
+
+    unfix           rxnpt
+    unfix           rxrscl
+    unfix           rxn
+
+next a
+jump run.tg.in loop
