@@ -18,8 +18,10 @@ EdgeIDs
 
 Constraints
 
+# the non-initiator disulfide need to be within the reacting cutoff as well
 distance 15 37 0.5 4.12
-custom "1/(exp(-v_alpha*(v_T-v_Tv)-ln(v_beta))+1) > random(0,1,12345)"
+# probability of reaction
+custom "1/(exp(-v_alpha*(v_T-v_Tv)-ln(v_beta))+1) > random(0,1,v_SEED)"
 
 Equivalences
 
