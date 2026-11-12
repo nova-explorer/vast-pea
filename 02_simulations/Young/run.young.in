@@ -1,103 +1,98 @@
-#-------------------Input_variables-------------------
-# dir 1 means x # dir 2 means y # dir 3 means z
-variable        dir equal 1
+# Deforms the system to calculate the Young's modulus
+# Adapted from the RFR-method (https://github.com/CMMRLab/RFR_stress_strain/tree/main) script
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_annealing3.data &
+                extra/special/per/atom 20 &
+                extra/bond/per/atom 10 &
+                extra/angle/per/atom 20 &
+                extra/dihedral/per/atom 50 &
+                extra/improper/per/atom 20
+
+# --- Inputs ---
+
+variable        dir equal 1 # dir 1 means x, 2 means y, 3 means z
 
 variable        strain equal 0.15
 variable        strain_rate_s equal 2e8 # in 1/s
 variable        thermo_per_ps equal 5 # N-data points per picosecond for thermo logfile
 
-variable        replicate string 0
-variable        system string ber
-variable        myid string tensile_${dir}_${system}_replicate_${replicate}
+# --- Calculated variables ---
 
-
-#-------------------Calculated_variables-------------------
-timestep        0.5
 variable        strain_rate_fs equal ${strain_rate_s}*1e-15 # in 1/fs
 variable        totaltime equal ${strain}/${strain_rate_fs} # total time in femtoseconds
 variable        steps equal ${totaltime}/dt
 variable        eeng equal time*${strain_rate_fs}
 variable        etrue equal ln(1+v_eeng)
 
-
-#-------------------Initialization-------------------
-units           real
-dimension       3
-boundary        p p p
-newton          on
-atom_style      full
-
-
-#-------------------Force_field-------------------
-label           start
-bond_style      class2
-angle_style     class2
-dihedral_style  class2
-improper_style  class2
-special_bonds   lj/coul 0 0 1
-neighbor        2.0 bin
-neigh_modify    delay 0 every 1 check yes one 5000 page 100000
-
-kspace_style    pppm 1.0e-4
-pair_style      lj/class2/coul/long 12.0
-pair_modify     mix sixthpower tail yes
-
-read_data       ber_05.data
-
-#-------------------Compute log and restart frequency-------------------
+# compute log and restart frequency
 variable         Time equal step/dt/1000 #time in picoseconds
 variable         msteps equal 1000/dt/${thermo_per_ps}
 variable         nsteps equal 5/dt
 
-
-#-------------------BER---------------------
-
+# --- BER setup ---
 molecule        ber_pre  ber_pre.lmpmol
 molecule        ber_post ber_post.lmpmol
 
-#-------------------Fixes-------------------
-velocity        all create 298 22931 dist gaussian loop local
+fix             rxn all bond/react stabilization yes npt_grp 0.03 &
+                    react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map &
+                        stabilize_steps $(500/dt)
+fix             rxnpt npt_grp_REACT npt temp $T $T 100 iso 1 1 1000
+fix             rxrscl bond_react_MASTER_group temp/rescale 1 $T $T 1 1
 
-thermo 1000
-thermo_style   custom step temp pe ke etotal press pxx pyy pzz vol density ebond eangle edihed eimp evdwl ecoul elong epair
-
-fix 		1 all npt temp 298 298 $(100/dt) iso 1 1 $(1000/dt)
-run 1000000
-unfix 1
-
-if "${dir} == 1" then &
-  "fix 		rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
-  "fix          1 npt_grp_REACT npt temp 298 298 $(100/dt) y 1.0 1.0 $(1000/dt) z 1.0 1.0 $(1000/dt)" &
-  "fix 		4 bond_react_MASTER_group temp/rescale 1 298 298 1 1" &
-  "fix          2 all deform 1 x erate ${strain_rate_fs}"
-
-if "${dir} == 2" then &
-  "fix 		rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
-  "fix          1 npt_grp_REACT npt temp 298 298 $(100/dt) x 1.0 1.0 $(1000/dt) z 1.0 1.0 $(1000/dt)" &
-  "fix 		4 bond_react_MASTER_group temp/rescale 1 298 298 1 1" &
-  "fix          2 all deform 1 y erate ${strain_rate_fs}"
-
-if "${dir} == 3" then &
-  "fix 		rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
-  "fix          1 npt_grp_REACT npt temp 298 298 $(100/dt) x 1.0 1.0 $(1000/dt) y 1.0 1.0 $(1000/dt)" &
-  "fix 		4 bond_react_MASTER_group temp/rescale 1 298 298 1 1" &
-  "fix          2 all deform 1 z erate ${strain_rate_fs}"
-
-compute         temperature all temp
+# variables used for calculating the probability of reaction
 variable        w equal 20
 variable        pTv equal 0.9
 variable        Tv equal 372.3
 variable        beta equal v_pTv/(1-v_pTv)
 variable        alpha equal v_beta/v_w/2
-variable        test equal 1/(exp(-v_alpha*(c_temperature-v_Tv)-ln(v_beta))+1)
+variable        prob equal 1/(exp(-v_alpha*(v_T-v_Tv)-ln(v_beta))+1)
 
+thermo          $(1000/dt)
+thermo_style    custom step f_rxn[*] temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density v_prob
+dump            1 all custom $(100000/dt) young.dump id mol type x y z ix iy iz
+
+# dumps which sulfur are currently bonded
 group           ber type 14
 compute         btype ber property/local btype
 compute         batom1 ber property/local batom1
 compute         batom2 ber property/local batom2
 dump            2 all local $(10/dt) bonds.dump c_btype c_batom1 c_batom2
 
-#-------------------Calculate_strains-------------------
+# --- Equilibration ---
+velocity        all create $T ${SEED} dist gaussian loop local
+
+run             1e6 # 1ns
+
+unfix           rxnpt
+unfix           rxrscl
+unfix           rxn
+
+# --- Strain fix ---
+
+if "${dir} == 1" then &
+  "fix 		rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
+  "fix    1 npt_grp_REACT npt temp $T $T $(100/dt) y 1.0 1.0 $(1000/dt) z 1.0 1.0 $(1000/dt)" &
+  "fix 		2 bond_react_MASTER_group temp/rescale 1 $T $T 1 1" &
+  "fix    3 all deform 1 x erate ${strain_rate_fs}"
+
+if "${dir} == 2" then &
+  "fix 		rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
+  "fix    1 npt_grp_REACT npt temp $T $T $(100/dt) x 1.0 1.0 $(1000/dt) z 1.0 1.0 $(1000/dt)" &
+  "fix 		2 bond_react_MASTER_group temp/rescale 1 $T $T 1 1" &
+  "fix    3 all deform 1 y erate ${strain_rate_fs}"
+
+if "${dir} == 3" then &
+  "fix 		rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
+  "fix    1 npt_grp_REACT npt temp $T $T $(100/dt) x 1.0 1.0 $(1000/dt) y 1.0 1.0 $(1000/dt)" &
+  "fix 		2 bond_react_MASTER_group temp/rescale 1 $T $T 1 1" &
+  "fix    3 all deform 1 z erate ${strain_rate_fs}"
+
+# --- Calculate strain and stresses ---
+# strains
 variable        tmp equal lx
 variable        lx0 equal ${tmp}
 variable        tmp equal ly
@@ -111,8 +106,7 @@ variable        etruex equal ln(1+v_eengx)
 variable        etruey equal ln(1+v_eengy)
 variable        etruez equal ln(1+v_eengz)
 
-
-#-------------------Calculate_stresses-------------------
+# stresses
 compute        p all pressure 1_temp
 variable       sxx equal -0.101325*c_p[1] #in MPa
 variable       syy equal -0.101325*c_p[2] #in MPa
@@ -128,20 +122,17 @@ fix            sxy_ave all ave/time 1 ${nsteps} ${nsteps} v_sxy
 fix            sxz_ave all ave/time 1 ${nsteps} ${nsteps} v_sxz
 fix            syz_ave all ave/time 1 ${nsteps} ${nsteps} v_syz
 
-
-#-------------------Outputs-------------------
+# --- Outputs ---
 thermo         $(5/dt)
-log            ${myid}.log.lammps
-thermo_style   custom step f_rxn[*] v_test temp pe ke etotal press pxx pyy pzz v_etrue v_eengx v_eengy v_eengz v_etruex v_etruey v_etruez &
-               f_sxx_ave f_syy_ave f_szz_ave f_sxy_ave f_sxz_ave f_syz_ave lx ly lz v_dir vol density ebond eangle edihed &
-               eimp evdwl ecoul elong epair v_Time
+log            young.log.lammps
+thermo_style   custom step f_rxn[*] v_test temp pe ke etotal press pxx pyy pzz &
+               v_etrue v_eengx v_eengy v_eengz v_etruex v_etruey v_etruez &
+               f_sxx_ave f_syy_ave f_szz_ave f_sxy_ave f_sxz_ave f_syz_ave &
+               lx ly lz v_dir vol density ebond eangle edihed eimp evdwl ecoul elong epair v_Time
 
-dump           6 all atom $(100000/dt) dump.${myid} #every picosecond
-dump_modify    6 scale no sort id
-
-#-------------------Run-------------------
+# --- Run deform ---
 run            ${steps}
 
-#-------------------Wrap up-------------------
-write_restart  ${myid}.restart
-write_data     ${myid}.data
+write_restart  young.restart
+write_data     young.data nofix
+
