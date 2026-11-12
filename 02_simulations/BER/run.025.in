@@ -1,0 +1,61 @@
+# Perform a 5ns production run simulation at 0.25fs timestep
+# The logging frequency for dumps is increased throughout the simulation
+# Since those simulations are long/prone to crashing, the nbrun variable is used to quickly change output names and not overwrite the previous ones
+
+# --- Init ---
+
+include         run.init.in
+
+read_restart    ber_pre.restart
+
+variable 	    nbrun equal 1 # used to change output names
+
+timestep 0.25
+
+# --- BER setup ---
+
+molecule        ber_pre  ber_pre.lmpmol
+molecule        ber_post ber_post.lmpmol
+
+fix             rxn all bond/react stabilization yes npt_grp 0.03 &
+                    react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map &
+                        stabilize_steps $(500/dt)
+
+fix             rxnpt npt_grp_REACT npt temp $T $T 100 iso 1 1 1000
+fix             rxrscl bond_react_MASTER_group temp/rescale 1 $T $T 1 1
+
+# variables used for calculating the probability of reaction
+variable        w equal 20
+variable        pTv equal 0.9
+variable        Tv equal 372.3
+variable        beta equal v_pTv/(1-v_pTv)
+variable        alpha equal v_beta/v_w/2
+variable        prob equal 1/(exp(-v_alpha*(v_T-v_Tv)-ln(v_beta))+1)
+
+thermo          $(1000/dt)
+thermo_style    custom step f_rxn[*] temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density v_prob
+dump            1 all custom $(10/dt) ber${nbrun}.dump id mol type x y z ix iy iz
+
+# dumps which sulfur are currently bonded to calculated BER dynamics
+group           ber type 14
+compute         btype ber property/local btype
+compute         batom1 ber property/local batom1
+compute         batom2 ber property/local batom2
+dump            2 all local $(10/dt) bonds${nbrun}.dump c_btype c_batom1 c_batom2
+
+# --- BER run (total of 5ns) ---
+
+run             $(1e4/dt) # 0.01 ns
+
+dump_modify     1 every $(100/dt)
+dump_modify     2 every $(100/dt)
+
+run             $(1e5/dt) # 0.1 ns
+
+dump_modify     1 every $(10000/dt)
+dump_modify     2 every $(10000/dt)
+
+run             $(489e4/dt) every $(1e6/dt) "write_restart ber${nbrun}_025.*.restart" # 4.89 ns
+
+write_data      ber_025.data nofix
+write_restart   ber_025.restart

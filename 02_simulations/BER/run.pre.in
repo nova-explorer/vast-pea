@@ -1,0 +1,27 @@
+# Equilibrates the system at the desired temperature
+
+# --- Init ---
+
+include         run.init.in
+
+read_data       system_annealing2.data
+
+timestep 0.25
+
+# --- Pre BER setup ---
+
+thermo $(10000/dt)
+thermo_style    custom step temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density
+dump            1 all custom $(10000/dt) pre_ber.dump id mol type x y z ix iy iz
+
+# --- Pre BER run ---
+
+fix		fxnpt all npt temp $T $T 100 iso 1 1 1000
+
+run		$(2000000/dt) # 2ns
+
+unfix		fxnpt
+undump 1
+
+write_data ber_pre.data nofix
+write_restart ber_pre.restart

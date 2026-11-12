@@ -1,0 +1,69 @@
+# Perform a 15ns production run simulation at 0.5fs timestep
+# Since those simulations are long/prone to crashing, the nbrun variable is used to quickly change output names and not overwrite the previous ones
+# The when restarting from a crash, it is preferable to decrease the timestep to 0.25fs for a short time, then increase back to 0.5fs. The restarting variable is used to trigger that
+
+# --- Init ---
+
+include         run.init.in
+
+read_restart	ber_025.restart
+
+variable 		nbrun equal 2 # used to change output names
+variable 		restarting equal 0 # 0 if not restarting from crash, 1 if restarting from crash
+
+if "${restarting}" then &
+	"timestep 0.25" &
+else &
+	"timestep 0.5"
+
+# --- BER setup ---
+
+molecule        ber_pre  ber_pre.lmpmol
+molecule        ber_post ber_post.lmpmol
+
+fix             rxn all bond/react stabilization yes npt_grp 0.03 &
+                    react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map &
+                        stabilize_steps $(500/dt)
+
+fix             rxnpt npt_grp_REACT npt temp $T $T 100 iso 1 1 1000
+fix             rxrscl bond_react_MASTER_group temp/rescale 1 $T $T 1 1
+
+# variables used for calculating the probability of reaction
+variable        w equal 20
+variable        pTv equal 0.9
+variable        Tv equal 372.3
+variable        beta equal v_pTv/(1-v_pTv)
+variable        alpha equal v_beta/v_w/2
+variable        test equal 1/(exp(-v_alpha*(v_T-v_Tv)-ln(v_beta))+1)
+
+thermo 			$(1000/dt)
+thermo_style    custom step f_rxn[*] temp ke pe etotal evdwl ecoul epair ebond eangle edihed press density v_test
+dump            1 all custom $(10000/dt) ber${nbrun}.dump id mol type x y z ix iy iz
+
+# dumps which sulfur are currently bonded to calculated BER dynamics
+group           ber type 14
+compute         btype ber property/local btype
+compute         batom1 ber property/local batom1
+compute         batom2 ber property/local batom2
+dump            2 all local $(10000/dt) bonds${nbrun}.dump c_btype c_batom1 c_batom2
+
+# --- BER run (total of 15ns) ---
+
+# if restarting from crash, run 1ns at 0.25fs timestep, then increase timestep to 0.5fs and reapply all fixes/dumps
+if "${restarting}" then &
+	"run $(1e6/dt)" &
+	"unfix rxnpt" &
+	"unfix rxrscl" &
+	"unfix rxn" &
+	"timestep 0.5" &
+	"fix rxn all bond/react stabilization yes npt_grp 0.03 react rxn1 all $(10/dt) 0.5 4.12 ber_pre ber_post ber.map stabilize_steps $(500/dt)" &
+	"fix rxnpt npt_grp_REACT npt temp $T $T 100 iso 1 1 1000" &
+	"fix rxrscl bond_react_MASTER_group temp/rescale 1 $T $T 1 1" &
+	"dump_modify 1 every $(10000/dt)" &
+	"dump_modify 2 every $(10000/dt)" &
+	"thermo $(1000/dt)"
+
+run 		$(15e6/dt) every $(1e6/dt) "write_restart ber${nbrun}_05.*.restart" # 15 ns
+
+write_data 	ber_05.data nofix
+write_restart 	ber_05.restart

@@ -47,6 +47,7 @@ The Young's modulus simulations are adapted from the [RFR-method](https://github
         - `run.05.in`: 15ns NPT at specific temperature with BERs enabled at 0.5fs timestep
         - For simple systems, the 3 steps can be run at 1fs timestep, thus skipping the second step
         - May require multiple submissions for HPCs with short max walltime. Several restart files are created for that purpose
+        - This is repeated for the following temperatures: 325K, 350K, 375K, 400K, 425K, 450K, 500K, 600K
 
     - Dilatometry:
         - `run.tg.in`: Start with a 4ns NPT equilibration at 600K. Temperature is then decreased by 20K every 2ns until 200K is reached.
