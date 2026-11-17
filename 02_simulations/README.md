@@ -60,5 +60,15 @@ The Young's modulus simulations are adapted from the [RFR-method](https://github
         - Since these are fairly short, x, y and z runs were realized sequentially in the same submission
 
 ## Requirements
-- LAMMPS
-- Python 3.9+
+- LAMMPS 2022+: Use the most recent version available as the REACTION package receives frequent useful updates
+    - Packages: MOLECULE, KSPACE, CLASS2, OPENMP and REACTION
+    - Versions used:
+        - MeluXina: 2Aug2023_update2-foss-2023a-kokko
+        - Iris and Aion: 29Aug2024_update2-foss-2024a-kokkos
+- Python 3.6+: Version used for development was 3.12.3, but the HPCs ran 3.6.8
+    - `recenter.py` typically was executed locally and not on the HPCs due to it's more involved dependencies:
+        - xarray
+        - pandas
+        - numpy
+        - scipy
+        - glob
