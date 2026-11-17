@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: segment class used to compute segments
+
+TODO:
+    -
+"""
+
 import xarray as xr
 import numpy as np
 import itertools

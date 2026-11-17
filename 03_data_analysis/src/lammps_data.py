@@ -1,15 +1,24 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: data_file class used to read and process LAMMPS data files
+
+TODO:
+    - __read_data keep only numbers could be handled more dynamically. LAMMPS usually has a pretty rigid formatting for sections spacing though, so fine
+"""
+
 import xarray as xr
 import pandas as pd
 import numpy as np
 from scipy.spatial.distance import cdist
-
 
 import io_
 
 class data_file():
     """
     TODO:
-        - __read_data keep only numbers could be handled more dynamically. LAMMPS usually has a pretty rigid formatting for sections spacing tho.
     """
     def __init__(self,
                  path="./", pattern="*.data", verbose=True

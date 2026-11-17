@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: wrapper for the lammps_logfile package
+
+TODO:
+    -
+"""
+
 import pandas as pd
 import numpy as np
 import lammps_logfile as ll

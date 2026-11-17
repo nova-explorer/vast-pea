@@ -1,3 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: Functions to read/write files
+
+TODO:
+    -
+"""
+
 import os
 from glob import glob
 import xarray as xr

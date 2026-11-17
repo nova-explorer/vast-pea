@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: trajectory class used to read and process LAMMPS dump trajectory files
+
+TODO:
+    - select n frames
+    - set columns type properly
+"""
+
 import xarray as xr
 import re
 import pandas as pd
@@ -6,10 +18,6 @@ import numpy as np
 import io_
 
 class trajectory():
-    """
-    TODO select n frames
-    TODO set columns type properly
-    """
     def __init__(self,
                  path = "./", pattern = "*.dump",
                  filter_type = "include", filter = False,

@@ -1,3 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: bond_dynamics class used to store information about bond swaps
+
+TODO:
+    - check if file splitting works correctly
+    - and workshop options for very large files
+    - better print
+"""
+
 import xarray as xr
 import pandas as pd
 import numpy as np
@@ -5,12 +18,6 @@ import re
 
 import io_
 
-"""
-TODO:
-    - check if file splitting works correctly
-    - and workshop options for very large files
-    - better print
-"""
 class bond_dynamics():
     def __init__(self,
                  path = "./", pattern = "bonds.dump",

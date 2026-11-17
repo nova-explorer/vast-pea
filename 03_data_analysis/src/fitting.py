@@ -1,14 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: curve_fit wrappers for different functions and data
+
+TODO:
+    - Units could probably be handled better
+"""
+
 from scipy.optimize import curve_fit, Bounds
 from scipy.special import gamma, polygamma
 import numpy as np
 import pint
-from pwlf import PiecewiseLinFit
 
 from constants import GAS_CONSTANT
-
-"""
-    Units could probably be handled better
-"""
 
 UNIT_REG = pint.UnitRegistry()
 PRINT_TEMPLATE_ERROR = "\t{name} : {value:.{dp}f} ± {error:.{dp}f} {unit}"

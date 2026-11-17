@@ -1,8 +1,18 @@
+# -*- coding: utf-8 -*-
+"""
+@author: Olivier Couture
+         olivier.couture@list.lu
+
+Description: Functions to compute certain properties
+
+TODO:
+    -
+"""
+
 import numpy as np
 from scipy.spatial.distance import cdist
 import xarray as xr
 from copy import copy
-from random import sample
 
 from constants import *
 

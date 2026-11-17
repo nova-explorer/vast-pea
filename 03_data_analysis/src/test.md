@@ -1,0 +1,1 @@
+$\frac{\sum_i \frac{x_i}{\sigma_i}^2}{\sum_i \frac{1}{\sigma_i}^2}$
