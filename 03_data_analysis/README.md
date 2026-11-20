@@ -29,4 +29,5 @@ Some details
     - [x] masses.py
     - [x] processing.py
 - [ ] package src instead of adding to path
-- [ ] consider changign crosslink_density.ipynb trajectory read to restore
+- [ ] consider changing crosslink_density.ipynb trajectory read to restore
+- [ ] consider adding merge_trajectories for run with multiple dump files
