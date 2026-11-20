@@ -1,5 +1,6 @@
 # Custom
 .vscode/*
+03_data_analysis/data/BER/tmp/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

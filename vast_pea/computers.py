@@ -306,6 +306,14 @@ def compute_legendre_poly(vectors:xr.DataArray, order:int, origin_nb:int) -> np.
 
 
 def compute_skewness_voxel(coms, bounds, vox_per_dim: int, verbose=True):
+
+    def is_point_in_voxel(point_center:np.ndarray, voxel_center: np.ndarray, voxel_half_length: float) -> bool:
+        dx = abs(point_center[0] - voxel_center[0]) - voxel_half_length
+        dy = abs(point_center[1] - voxel_center[1]) - voxel_half_length
+        dz = abs(point_center[2] - voxel_center[2]) - voxel_half_length
+
+        return np.max([dx, dy, dz]) < 0
+
     timesteps = coms.ts.values
     ids = coms.id.values
     comps = coms.comp.values
@@ -377,10 +385,3 @@ def compute_skewness_voxel(coms, bounds, vox_per_dim: int, verbose=True):
     q_count = [ voxels['nq'].where(voxels['nq']==i).count(dim='id') for i in range(max_q+1) ]
 
     return skewness, xr.concat(q_count, dim='q')
-
-def is_point_in_voxel(point_center:np.ndarray, voxel_center: np.ndarray, voxel_half_length: float) -> bool:
-    dx = abs(point_center[0] - voxel_center[0]) - voxel_half_length
-    dy = abs(point_center[1] - voxel_center[1]) - voxel_half_length
-    dz = abs(point_center[2] - voxel_center[2]) - voxel_half_length
-
-    return np.max([dx, dy, dz]) < 0

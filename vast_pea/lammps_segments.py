@@ -291,41 +291,41 @@ class segment():
         n_all = len(atoms.id.values) + len(self._coms.id.values)
         n_atoms = len(atoms.id.values)
         with open(filename, 'wt') as f:
-            for ts in [atoms.ts.values[0]]:
-                f.write( 'ITEM: TIMESTEP\n' )
-                f.write( str(ts)+'\n' )
+            ts = atoms.ts.values[0]
+            f.write( 'ITEM: TIMESTEP\n' )
+            f.write( str(ts)+'\n' )
 
-                f.write( 'ITEM: NUMBER OF ATOMS\n' )
-                f.write( str(n_all) + '\n' )
+            f.write( 'ITEM: NUMBER OF ATOMS\n' )
+            f.write( str(n_all) + '\n' )
 
-                f.write( 'ITEM: BOX BOUNDS pp pp pp\n' )
-                for comp in atoms.bounds.comp.values:
-                    f.write(
-                        '0 ' + str(atoms.bounds.sel(ts=ts, comp=comp).values) + '\n'
+            f.write( 'ITEM: BOX BOUNDS pp pp pp\n' )
+            for comp in atoms.bounds.comp.values:
+                f.write(
+                    '0 ' + str(atoms.bounds.sel(ts=ts, comp=comp).values) + '\n'
+                    )
+
+            f.write( 'ITEM: ATOMS id mol type x y z ix iy iz\n')
+            for i in atoms.id.values:
+                f.write(
+                    atoms_template.format(
+                        id=i,
+                        type=atoms.sel(ts=ts, id=i).type.values,
+                        x=positions.sel(ts=ts, id=i, comp='x').values,
+                        y=positions.sel(ts=ts, id=i, comp='y').values,
+                        z=positions.sel(ts=ts, id=i, comp='z').values,
                         )
+                    )
 
-                f.write( 'ITEM: ATOMS id mol type x y z ix iy iz\n')
-                for i in atoms.id.values:
-                    f.write(
-                        atoms_template.format(
-                            id=i,
-                            type=atoms.sel(ts=ts, id=i).type.values,
-                            x=positions.sel(ts=ts, id=i, comp='x').values,
-                            y=positions.sel(ts=ts, id=i, comp='y').values,
-                            z=positions.sel(ts=ts, id=i, comp='z').values,
-                            )
+            for i, id_i in enumerate(self._coms.id.values):
+                f.write(
+                    cms_template.format(
+                        id=i + n_atoms + 1,
+                        type=cms_type_start + self._coms.type.sel(id=id_i).values,
+                        x=self._coms.positions.sel(ts=ts, id=id_i, comp='x').values,
+                        y=self._coms.positions.sel(ts=ts, id=id_i, comp='y').values,
+                        z=self._coms.positions.sel(ts=ts, id=id_i, comp='z').values
                         )
-
-                for i, id_i in enumerate(self._coms.id.values):
-                    f.write(
-                        cms_template.format(
-                            id=i + n_atoms + 1,
-                            type=cms_type_start + self._coms.type.sel(id=id_i).values,
-                            x=self._coms.positions.sel(ts=ts, id=id_i, comp='x').values,
-                            y=self._coms.positions.sel(ts=ts, id=id_i, comp='y').values,
-                            z=self._coms.positions.sel(ts=ts, id=id_i, comp='z').values
-                            )
-                        )
+                    )
 
     def get_coms(self):
         return self._coms
