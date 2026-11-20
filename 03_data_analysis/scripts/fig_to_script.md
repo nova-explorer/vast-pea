@@ -3,8 +3,8 @@
 Here is a list of which scripts were used to generate which data in the publication.
 Please note that the scripts included here are examples on how to generate the data and not the exact scripts used for plotting the figures/tables.
 
-- Figure 2a: Crosslink density
-- Figure 2b: Density
+- Figure 2a: [Crosslink density](1_structure/crosslink_density.ipynb)
+- Figure 2b: [Density](1_structure/density.ipynb)
 - Figures 2c, 2d and S8: RDF
 - Table 2 and Figure S6: Skewness-voxel
 - Figures 3a, 3b and S9: Tg
@@ -17,6 +17,6 @@ Please note that the scripts included here are examples on how to generate the d
 - Figures 5, S13, S14, S15 and S16: MSD
 - Figures 6 and S4b: Arrhenian-like fits
 - Figure S4a: Probability of reaction
-- Figure S5 and Table S1: Conversion
+- Figure S5 and Table S1: [Conversion](1_structure/conversion.ipynb)
 - Figure S10: Absolute FFV
 - Figure S17: Diffusion coefficients

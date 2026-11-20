@@ -179,7 +179,7 @@ def compute_nb_reactions(bonds):
 
     return nb_reactions
 
-def compute_crosslinking_density(lammps_data, effective=True, volume=None, bounds=None, crosslink_point_type=10, crosslink_types=[3,5], is_poss=False, poss_type=15, type_per_poss=8, poss_offset=108):
+def compute_crosslink_density(lammps_data, effective=True, volume=None, bounds=None, crosslink_point_type=10, crosslink_types=[3,5], is_poss=False, poss_type=15, type_per_poss=8, poss_offset=108):
     if (not volume and not bounds) or (volume and bounds) :
         raise ValueError("Need to provide bounds OR volume")
     elif volume:
@@ -214,6 +214,7 @@ def compute_crosslinking_density(lammps_data, effective=True, volume=None, bound
 
     def count_crosslinks_hardener(a):
         return len(sub_data.bonds[a[0]]) + len(sub_data.bonds[a[1]])
+
     def count_crosslinks_poss(a):
         return len(sub_data.bonds[a])
 
