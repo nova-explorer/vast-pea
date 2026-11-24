@@ -6,7 +6,7 @@ Please note that the scripts included here are examples on how to generate the d
 - Figure 2a: [Crosslink density](1_structure/crosslink_density.ipynb)
 - Figure 2b: [Density](1_structure/density.ipynb)
 - Figures 2c, 2d and S8: [RDF](1_structure/rdf.ipynb)
-- Table 2 and Figure S6: Skewness-voxel
+- Table 2 and Figure S6: [Skewness-voxel](1_structure/skewness_voxel.ipynb)
 - Figures 3a, 3b and S9: Tg
 - Figure 3c and Table S2: Relative FFV
 - Figure 3d: CTE
