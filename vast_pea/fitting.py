@@ -432,8 +432,6 @@ class fit_tg_window_linear_intersection():
 
         return y
 
-
-
 class fit_wlffv:
     def __init__(self,
         temperature:np.ndarray, ffv:np.ndarray,
@@ -481,3 +479,54 @@ class fit_wlffv:
             )
 
             print(PRINT_TEMPLATE_RSQ.format(r_sq))
+
+class fit_diffusion:
+    def __init__(self,
+        x:np.ndarray, y:np.ndarray,
+        initial_units={'dist':'angstrom', 'time':'ns'},
+        final_units  ={'dist':'cm',       'time':'s'},
+        verbose=True) -> None:
+
+        if verbose:
+            print("Fitting Diffusion Coefficient :")
+
+        self.x = x
+        self.y = y
+
+        popt, perr, r_sq, fitted = fit(self.x, self.y, equation_linear)
+
+        self.r_sq = r_sq
+        self.fitted = fitted
+
+        self.a = popt[0]
+        self.a_err = perr[0]
+
+        self.b = popt[1]
+        self.b_err = perr[1]
+
+        dist_units = UNIT_REG[initial_units['dist']].to(final_units['dist'])
+        time_units = UNIT_REG[initial_units['time']].to(final_units['time'])
+
+        self.diff_coef = self.a / 6 * dist_units.magnitude**2 / time_units.magnitude
+        self.diff_err = self.a_err / 6 * dist_units.magnitude**2 / time_units.magnitude
+
+        if verbose:
+            print_value(
+                name = "a",
+                value = self.a,
+                error = self.a_err,
+                units = '{}^2 / {}'.format(initial_units['dist'], initial_units['time'])
+            )
+            print_value(
+                name = "b",
+                value = self.b,
+                error = self.b_err,
+                units = initial_units['dist']
+            )
+            print(PRINT_TEMPLATE_RSQ.format(r_sq))
+            print_value(
+                name = "Diffusion coefficient",
+                value = self.diff_coef,
+                error = self.diff_err,
+                units = '{}^2 / {}'.format(final_units['dist'], final_units['time'])
+            )

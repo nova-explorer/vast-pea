@@ -15,3 +15,6 @@ Some details
 ## Requirements
 - Python 3.10+: Began this work on 3.10.8, currently on 3.12.3.
 - python packages
+
+## Todo
+- [ ] Conversion doesn't feature convergence fit
