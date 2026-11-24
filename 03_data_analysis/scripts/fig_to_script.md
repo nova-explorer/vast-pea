@@ -12,7 +12,7 @@ Please note that the scripts included here are examples on how to generate the d
 - Figure 3d: CTE
 - Figure 3f and 3g: Young's modulus
 - Figures 4a and S11: [Number of BERs](3_dynamics/number_bers.ipynb)
-- Figures 4b and S12: Bond autocorrelation function Csw
+- Figures 4b and S12: [Bond autocorrelation function Csw](3_dynamics/bond_autocorrelation.ipynb)
 - Figures 4c and S19: Legendre orientational order parameter P1
 - Figures 5, S13, S14, S15 and S16: MSD
 - Figures 6 and S4b: Arrhenian-like fits
