@@ -164,7 +164,7 @@ class fit_KWW():
 
 class fit_arrhenius:
     def __init__(self,
-        temperature:np.ndarray, property:np.ndarray,
+        temperature:np.ndarray, tau:np.ndarray,
         initial_units={'temp':'K', 'time':'ps'},
         final_units={'time':'s', 'energy':'kJ/mol'},
         verbose=True) -> None:
@@ -172,13 +172,13 @@ class fit_arrhenius:
         if verbose:
             print("Fitting Arrhenius :")
 
-        temperature = UNIT_REG.Quantity(temperature, initial_units['temp']).to('K') # pyright: ignore[reportAssignmentType]
-        property_units = UNIT_REG[initial_units['time']].to(final_units['time']) # pyright: ignore[reportAttributeAccessIssue]
-        property *= property_units.magnitude
+        temperature = UNIT_REG.Quantity(temperature, initial_units['temp']).to('K')
+        tau_units = UNIT_REG[initial_units['time']].to(final_units['time'])
+        tau *= tau_units.magnitude
 
-        self.x = 1/temperature.magnitude # pyright: ignore[reportAttributeAccessIssue]
-        self.y = np.log(property)
-        y_units = 'ln({})'.format(property_units.units)
+        self.x = 1/temperature.magnitude
+        self.y = np.log(tau)
+        y_units = 'ln({})'.format(tau_units.units)
 
         popt, perr, r_sq, fitted = fit(self.x, self.y, equation_linear)
 
@@ -224,13 +224,13 @@ class fit_arrhenius:
                 name = "Prefactor",
                 value = self.prefactor,
                 error = self.prefactor_err,
-                units = property_units.units
+                units = tau_units.units
             )
 
 class fit_arrhenius_yerr:
     def __init__(self,
-        temperature:np.ndarray, property:np.ndarray,
-        prop_err:np.ndarray,
+        temperature:np.ndarray, tau:np.ndarray,
+        tau_err:np.ndarray,
         initial_units={'temp':'K', 'time':'ps'},
         final_units={'time':'s', 'energy':'kJ/mol'},
         verbose=True) -> None:
@@ -238,15 +238,15 @@ class fit_arrhenius_yerr:
         if verbose:
             print("Fitting Arrhenius :")
 
-        temperature = UNIT_REG.Quantity(temperature, initial_units['temp']).to('K') # pyright: ignore[reportAssignmentType]
-        property_units = UNIT_REG[initial_units['time']].to(final_units['time']) # pyright: ignore[reportAttributeAccessIssue]
-        property *= property_units.magnitude
-        prop_err *= property_units.magnitude
+        temperature = UNIT_REG.Quantity(temperature, initial_units['temp']).to('K')
+        tau_units = UNIT_REG[initial_units['time']].to(final_units['time'])
+        tau *= tau_units.magnitude
+        tau_err *= tau_units.magnitude
 
         self.x = 1/temperature.magnitude # pyright: ignore[reportAttributeAccessIssue]
-        self.y = np.log(property)
-        y_units = 'ln({})'.format(property_units.units)
-        self.y_err = abs(prop_err/property)
+        self.y = np.log(tau)
+        y_units = 'ln({})'.format(tau_units.units)
+        self.y_err = abs(tau_err/tau)
 
         popt, perr, r_sq, fitted = fit(self.x, self.y, equation_linear, sigma=self.y_err, absolute_sigma=True)
 
@@ -292,7 +292,7 @@ class fit_arrhenius_yerr:
                 name = "Prefactor",
                 value = self.prefactor,
                 error = self.prefactor_err,
-                units = property_units.units
+                units = tau_err.units
             )
 
 class fit_exponential_convergence():
