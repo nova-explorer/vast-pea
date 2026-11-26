@@ -269,41 +269,23 @@ def compute_crosslink_density(lammps_data, effective=True, volume=None, bounds=N
 
     return count / vol / ANGSTROM_TO_METER**3 / AVOGADRO_NUMBER
 
-def compute_legendre_poly(vectors:xr.DataArray, order:int, origin_nb:int) -> np.ndarray:
+def compute_legendre_poly(vectors:xr.DataArray, order:int) -> np.ndarray:
 
-    if len(vectors.ts.values) < origin_nb:
-        raise IndexError("Nb of origins is larger than number of data")
+    dot_prod = vectors.dot( vectors.isel(ts=0), dim='comp' )
 
-    if origin_nb > 1:
-        origins = sorted(sample(list(vectors.ts.values), origin_nb))
-    elif origin_nb == 1:
-        origins = [0]
+    if order == 1:
+        oacf = dot_prod.mean(dim='id')
+
+    elif order == 2:
+        oacf = (dot_prod**2).mean(dim='id')
+
     else:
-        raise IndexError("Nb of origins not valid")
-
-    oacf = []
-    for origin in origins:
-
-        vectors_o = vectors.where(vectors.ts >= origin)
-
-        dot_prod = vectors_o.dot( vectors_o.isel(ts=0), dim='comp' )
-        if order == 1:
-            oacf.append( dot_prod.mean(dim='id') )
-
-        elif order == 2:
-            oacf.append( (dot_prod**2).mean(dim='id') )
-
-        else:
-            raise IndexError("Legendre polynomial order not implemented")
-
-    max_len = len(oacf[0])
-    oacf = np.nanmean( [ np.append(i, [np.nan]*(max_len-len(i))) for i in oacf ], axis=0 )
+        raise IndexError("Legendre polynomial order not implemented")
 
     if order == 2:
         oacf = 3/2 * oacf - 1/2
 
-    return oacf
-
+    return oacf.values
 
 def compute_skewness_voxel(coms, bounds, vox_per_dim: int, verbose=True):
 
