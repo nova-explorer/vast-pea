@@ -8,13 +8,12 @@ Please note that the scripts included here are examples on how to generate the d
 - Figures 2c, 2d and S8: [RDF](1_structure/rdf.ipynb)
 - Table 2 and Figure S6: [Skewness-voxel](1_structure/skewness_voxel.ipynb)
 - Figures 3a, 3b, 3d, 3e and S9: [Tg and CTE](2_thermomechanical/dilatometry.ipynb)
-- Figure 3c and Table S2: Relative FFV
-- Figure 3f and 3g: Young's modulus
+- Figure 3c, S10 and Table S2: [Absolute and Relative FFV](2_thermomechanical/ffv.ipynb)
+- Figure 3f and 3g: [Young's modulus](2_thermomechanical/young_mod.ipynb)
 - Figures 4a and S11: [Number of BERs](3_dynamics/number_bers.ipynb)
 - Figures 4b and S12: [Bond autocorrelation function Csw](3_dynamics/bond_autocorrelation.ipynb)
 - Figures 4c and S19: [Legendre orientational order parameter P1](3_dynamics/segment_oriention_autocorrelation.ipynb)
 - Figures 5, S13, S14, S15 and S16: [MSD](3_dynamics/msd.ipynb)
 - Figures 6 and S4b: [Arrhenian-like fits](3_dynamics/arrhenian_fits.ipynb)
 - Figure S5 and Table S1: [Conversion](1_structure/conversion.ipynb)
-- Figure S10: Absolute FFV
 - Figure S17: [Diffusion coefficient](3_dynamics/diffusion.ipynb)
