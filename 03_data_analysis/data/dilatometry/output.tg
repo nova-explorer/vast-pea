@@ -8,7 +8,6 @@ Dangerous builds = 0
 dynamic group bond_react_MASTER_group defined
 dynamic group npt_grp_REACT defined
 PPPM initialization ...
-WARNING: System is not charge neutral, net charge = -21.965559 (src/kspace.cpp:327)
   using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
   G vector (1/distance) = 0.16743933
   grid = 18 18 18
@@ -39,7 +38,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 4000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.35 | 53.44 | 53.81 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
    5990000   2603           599.46786      85247.63       101631.2       186878.83      5230.2252      37242.363      14809.784      37978.355      41522.872      5007.9733     -326.88133      1.0171021      92.966774      1
@@ -137,7 +135,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 6000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.35 | 53.47 | 53.81 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
    7990000   2780           582.44177      82826.426      97872.984      180699.41      4374.0943      37190.932      13876.851      36623.303      40346.899      4771.4327     -102.97764      1.0316599      92.554141      1
@@ -235,7 +232,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 8000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.35 | 53.48 | 53.79 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
    9990000   1796           560.19462      79662.759      94244.355      173907.11      4082.7805      37110.998      13445.538      35517.996      39217.574      3894.5822      130.14901      1.0433515      92.494073      1
@@ -333,7 +329,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 10000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.35 | 53.47 | 53.81 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   11990000   1964           537.87132      76488.262      91188.379      167676.64      3660.3972      37127.298      13003.38       34280.186      38475.129      3336.8339      111.03708      1.0500919      92.312261      1
@@ -447,7 +442,6 @@ The log file lists these citations in BibTeX format.
 CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
 
 PPPM initialization ...
-WARNING: System is not charge neutral, net charge = -22.393712 (src/kspace.cpp:327)
   using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
   G vector (1/distance) = 0.16856218
   grid = 18 18 18
@@ -480,7 +474,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 12000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 52 | 52.19 | 52.48 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   13990000   3661           518.7594       73770.443      88309.609      162080.05      3150.582       37151.619      12429.736      33425.092      37461.752      2961.9855     -389.31861      1.0562004      92.094432      1
@@ -578,7 +571,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 14000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.29 | 53.46 | 53.76 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   15990000   1329           498.75816      70926.157      85157.455      156083.61      2615.0128      36995.698      11733.538      32493.125      36678.119      2299.1408      157.52808      1.0688053      91.791893      1
@@ -676,7 +668,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 16000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.29 | 53.5 | 53.76 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   17990000   1437           478.74335      68079.939      81526.186      149606.13      2099.592       36996.573      11175.096      31144.27       35880.33       1451.2623      92.393148      1.0771258      91.647602      1
@@ -774,7 +765,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 18000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.28 | 53.53 | 53.76 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   19990000   937            461.466        65623.006      77549.003      143172.01      1296.7977      36973.571      10300.864      30187.822      34464.031      802.30447      384.89258      1.0923833      91.192648      1
@@ -872,7 +862,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 20000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.28 | 53.53 | 53.76 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   21990000   1220           439.58071      62510.796      75072.304      137583.1       836.69257      36928.23       9771.3328      29302.614      33607.165      646.52457     -474.98704      1.0959173      91.071099      1
@@ -970,7 +959,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 22000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.29 | 53.56 | 53.76 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   23990000   808            417.78618      59411.495      71311.222      130722.72      696.14234      36833.879      9484.8697      27884.703      32609.757     -298.12877      105.04258      1.1001477      90.979866      1
@@ -1084,7 +1072,6 @@ The log file lists these citations in BibTeX format.
 CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
 
 PPPM initialization ...
-WARNING: System is not charge neutral, net charge = -22.393712 (src/kspace.cpp:327)
   using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
   G vector (1/distance) = 0.16973385
   grid = 18 18 18
@@ -1117,7 +1104,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 24000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 52.05 | 52.33 | 52.53 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   25990000   1337           399.68934      56838.024      68391.272      125229.3       21.246885      36823.19       8758.1296      27149.046      31700.909     -793.94937      347.68311      1.1141561      90.540827      0.99978177
@@ -1215,7 +1201,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 26000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.34 | 53.63 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   27990000   232            379.92539      54027.482      64846.663      118874.15     -584.22938      36784.669      8092.1531      25743.334      30625.898     -1091.0486     -120.51565      1.1198931      90.416288      0.99978177
@@ -1313,7 +1298,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 28000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.34 | 53.66 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   29990000   150            359.96034      51188.342      61660.536      112848.88     -760.84584      36833.866      7936.7042      24404.245      29588.462     -1690.4898      284.24442      1.1267814      90.206786      0.99978177
@@ -1411,7 +1395,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 30000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.33 | 53.65 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   31990000   120            338.98435      48205.441      59128.854      107334.29     -1273.1807      36739.353      7281.6169      23992.32       28670.775     -2163.4605     -372.64975      1.1320186      90.057233      0.99978177
@@ -1509,7 +1492,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 32000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.33 | 53.67 | 53.79 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   33990000   3              316.5187       45010.701      55402.864      100413.57     -1648.5685      35078.213      6765.4908      22273.635      27696.877     -2621.4125      165.71026      1.1379561      89.907316      0.99978177
@@ -1607,7 +1589,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 34000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.33 | 53.66 | 53.79 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   35990000   0              299.93466      42652.36       52689.387      95341.747     -1887.4344      35071.122      6483.7164      21578.284      26668.968     -3237.7052     -416.09062      1.1434437      89.749708      0.99978177
@@ -1721,7 +1702,6 @@ The log file lists these citations in BibTeX format.
 CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE-CITE
 
 PPPM initialization ...
-WARNING: System is not charge neutral, net charge = -22.393712 (src/kspace.cpp:327)
   using 12-bit tables for long-range coulomb (src/kspace.cpp:342)
   G vector (1/distance) = 0.16110946
   grid = 16 16 16
@@ -1754,7 +1734,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 36000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 52.07 | 52.4 | 52.52 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   37990000   0              280.43105      39878.839      49299.002      89177.841     -2325.1131      34967.801      5939.5277      20700.295      25248.803     -3713.3875      476.70013      1.1494733      89.611917      8.610569e-09
@@ -1852,7 +1831,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 38000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.36 | 53.7 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   39990000   0              260.7906       37085.859      46205.544      83291.403     -2663.7807      34945.515      5556.7138      19300.344      24544.204     -4230.869       304.2824       1.1533354      89.518423      8.610569e-09
@@ -1950,7 +1928,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 40000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.36 | 53.71 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   41990000   0              240.90188      34257.573      43103.82       77361.393     -3168.1111      34934.029      5024.0322      18124.261      23489.979     -4509.8401     -629.9974       1.1564243      89.427557      8.610569e-09
@@ -2048,7 +2025,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 42000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.36 | 53.72 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   43990000   0              220.45582      31350.031      40050.522      71400.553     -3409.0518      34810.28       4623.1718      17235.148      22515.658     -5209.2434     -266.43462      1.1633968      89.269239      8.610569e-09
@@ -2146,7 +2122,6 @@ Setting up Verlet run ...
   Unit style    : real
   Current step  : 44000000
   Time step     : 1
-WARNING: Inconsistent image flags (src/domain.cpp:1051)
 Per MPI rank memory allocation (min/avg/max) = 53.36 | 53.72 | 53.8 Mbytes
    Step        f_rxn[1]         Temp          KinEng         PotEng         TotEng         E_vdwl         E_coul         E_pair         E_bond        E_angle        E_dihed         Press         Density          c_rg          v_test
   45990000   0              199.30906      28342.845      37273.721      65616.566     -3468.9298      34806.287      4542.3927      16221.073      21406.586     -5711.9211      411.99097      1.1650955      89.207381      8.610569e-09
