@@ -1,0 +1,73 @@
+
+
+Running free_volume v1.12 / 14 April 2025
+Using Python version 3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]
+Running in numba mode (compiled numpy arrays mode)
+Read in <path to data file>/system_tg.480.data LAMMPS datafile
+System boundary p p p
+Voxel generation execution time: 165.84689593315125 (seconds)
+
+
+Building numpy arrays to compile code
+Atom volume calculation execution time: 1570.349868774414 (seconds)
+
+Using path from topofile to set parent_directory ...
+This is a saved .txt file for the print outs that appear when running free_volume.py v1.12 / 14 April 2025
+Running in numba-p mode
+
+
+
+Elements found in system:
+- C
+- H
+- N
+- O
+- S
+
+
+System Unit cell, volume, mass, density
+Lx:             81.37601  angstrom  
+Ly:             81.37601  angstrom  
+Lz:             81.37601  angstrom  
+volume:        5.3888E-19 cm^3      
+mass:          5.8072E-19 grams     
+density:        1.07766   g/cm^3    
+
+
+Voxel information:
+max_voxel_size = 0.1
+Number of x-voxels, x-voxel dimension = 814, 0.09997052248278372
+Number of y-voxels, y-voxel dimension = 814, 0.09997052248278372
+Number of z-voxels, z-voxel dimension = 814, 0.09997052248278372
+Number of voxels created 539353144
+probe_diameter = 0.11
+
+
+PBC information:
+System periodic boundary flags                        : p p p
+Count of atoms that are near cell edge (possibly PBC) : 10934
+Total Count of periodically determined occupied voxels: 104796677
+
+
+Free volume analysis results:
+vdw radii method      : class2
+Simulation cell volume: 538876.3208356187 A^3
+Atom volume           : 433765.90048909583 A^3
+Free volume           : 105110.42034652267 A^3
+Percent Free volume   : 19.505481366026853 %
+
+
+Execution time in seconds:    1740.7475001811981
+
+
+All outputs can be found in <path to data file> directory
+
+
+Normal program termination
+
+
+
+
+Number of WARNING(s) and ERROR(s)
+  0 WARNING(s)
+  0 ERROR(s)
