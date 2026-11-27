@@ -27,7 +27,7 @@ The Young's modulus simulations are adapted from the [RFR-method](https://github
 - `system_cell.data`: Example of an initial data file for DGEBA/AFD-OPS.
 
 ## Execution
-- [Create initial system_cell.data files](docs/CONTRIBUTING.md)
+- [Create initial system_cell.data files](../01_system_creation/README.md)
 - Run preparation simulations (in order):
     - `run.equil1.in`: 2ns NVT simulation to let the monomers in the sparse system agglomerate
     - `recenter.py`: custom python script to center the monomer agglomeration and remove excess volume (can be skipped for simple systems)
